@@ -8,13 +8,22 @@
 
 import UIKit
 
+enum SMScoringMethod {
+    case English
+    case American
+}
+
 class SMGame: NSObject {
     
     let home: SMPlayer
     let away: SMPlayer
     
-    init(_ homePlayer: SMPlayer, _ awayPlayer: SMPlayer) {
+    let scoringMethod: SMScoringMethod?
+    
+    init(_ homePlayer: SMPlayer, _ awayPlayer: SMPlayer, _ scoringStyle: SMScoringMethod? = .English) {
         home = homePlayer
         away = awayPlayer
+        
+        scoringMethod = scoringStyle
     }
 }

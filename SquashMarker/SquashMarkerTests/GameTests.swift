@@ -10,6 +10,9 @@ import XCTest
 
 class GameTests: XCTestCase {
     
+    let player1 = SMPlayer()
+    let player2 = SMPlayer()
+    
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -21,12 +24,16 @@ class GameTests: XCTestCase {
     }
     
     func testGameHasTwoPlayers() {
-        let player1 = SMPlayer()
-        let player2 = SMPlayer()
-        
         let newGame = SMGame(player1, player2)
-        
         XCTAssertNotNil(newGame, "New Game not initialised")
+    }
+    
+    func testScoringMethod() {
+        let newGame = SMGame(player1, player2)
+        XCTAssert(newGame.scoringMethod == .English)
+        
+        let newGame1 = SMGame(player1, player2, .American)
+        XCTAssert(newGame1.scoringMethod == .American)
     }
     
 }
