@@ -21,6 +21,10 @@
 		8D17E40D202C6DD900993F06 /* SMGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D17E40C202C6DD900993F06 /* SMGame.swift */; };
 		8D17E40E202C6DD900993F06 /* SMGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D17E40C202C6DD900993F06 /* SMGame.swift */; };
 		8D17E411202C83A300993F06 /* PlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D17E410202C83A300993F06 /* PlayerTests.swift */; };
+		8DCB7FB7202C87B40052E20A /* GameplayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCB7FB6202C87B40052E20A /* GameplayTests.swift */; };
+		8DCB7FBA202C886A0052E20A /* MatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCB7FB9202C886A0052E20A /* MatchTests.swift */; };
+		8DCB7FBD202C892A0052E20A /* SMMatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCB7FBC202C892A0052E20A /* SMMatch.swift */; };
+		8DCB7FBE202C892A0052E20A /* SMMatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCB7FBC202C892A0052E20A /* SMMatch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +63,9 @@
 		8D17E409202C6DC700993F06 /* SMPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMPlayer.swift; sourceTree = "<group>"; };
 		8D17E40C202C6DD900993F06 /* SMGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMGame.swift; sourceTree = "<group>"; };
 		8D17E410202C83A300993F06 /* PlayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTests.swift; sourceTree = "<group>"; };
+		8DCB7FB6202C87B40052E20A /* GameplayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameplayTests.swift; sourceTree = "<group>"; };
+		8DCB7FB9202C886A0052E20A /* MatchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchTests.swift; sourceTree = "<group>"; };
+		8DCB7FBC202C892A0052E20A /* SMMatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMMatch.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +116,7 @@
 		8D17E3D3202C685900993F06 /* SquashMarker */ = {
 			isa = PBXGroup;
 			children = (
+				8DCB7FBB202C891A0052E20A /* Match */,
 				8D17E408202C6DA900993F06 /* Player */,
 				8D17E407202C6D7F00993F06 /* Game */,
 				8D17E3D4202C685900993F06 /* AppDelegate.swift */,
@@ -125,6 +133,8 @@
 		8D17E3EB202C685900993F06 /* SquashMarkerTests */ = {
 			isa = PBXGroup;
 			children = (
+				8DCB7FB8202C88570052E20A /* MatchTests */,
+				8DCB7FB5202C879A0052E20A /* GameplayTests */,
 				8D17E40F202C821C00993F06 /* PlayerTests */,
 				8D17E3EC202C685900993F06 /* SquashMarkerTests.swift */,
 				8D17E3EE202C685900993F06 /* Info.plist */,
@@ -164,6 +174,30 @@
 				8D17E410202C83A300993F06 /* PlayerTests.swift */,
 			);
 			path = PlayerTests;
+			sourceTree = "<group>";
+		};
+		8DCB7FB5202C879A0052E20A /* GameplayTests */ = {
+			isa = PBXGroup;
+			children = (
+				8DCB7FB6202C87B40052E20A /* GameplayTests.swift */,
+			);
+			path = GameplayTests;
+			sourceTree = "<group>";
+		};
+		8DCB7FB8202C88570052E20A /* MatchTests */ = {
+			isa = PBXGroup;
+			children = (
+				8DCB7FB9202C886A0052E20A /* MatchTests.swift */,
+			);
+			path = MatchTests;
+			sourceTree = "<group>";
+		};
+		8DCB7FBB202C891A0052E20A /* Match */ = {
+			isa = PBXGroup;
+			children = (
+				8DCB7FBC202C892A0052E20A /* SMMatch.swift */,
+			);
+			path = Match;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,6 +337,7 @@
 				8D17E3D7202C685900993F06 /* ViewController.swift in Sources */,
 				8D17E40D202C6DD900993F06 /* SMGame.swift in Sources */,
 				8D17E3DD202C685900993F06 /* SquashMarker.xcdatamodeld in Sources */,
+				8DCB7FBD202C892A0052E20A /* SMMatch.swift in Sources */,
 				8D17E40A202C6DC700993F06 /* SMPlayer.swift in Sources */,
 				8D17E3D5202C685900993F06 /* AppDelegate.swift in Sources */,
 			);
@@ -312,9 +347,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DCB7FBA202C886A0052E20A /* MatchTests.swift in Sources */,
 				8D17E411202C83A300993F06 /* PlayerTests.swift in Sources */,
 				8D17E3ED202C685900993F06 /* SquashMarkerTests.swift in Sources */,
 				8D17E40E202C6DD900993F06 /* SMGame.swift in Sources */,
+				8DCB7FB7202C87B40052E20A /* GameplayTests.swift in Sources */,
+				8DCB7FBE202C892A0052E20A /* SMMatch.swift in Sources */,
 				8D17E40B202C6DC700993F06 /* SMPlayer.swift in Sources */,
 				8D17E406202C6C8E00993F06 /* GameTests.swift in Sources */,
 			);

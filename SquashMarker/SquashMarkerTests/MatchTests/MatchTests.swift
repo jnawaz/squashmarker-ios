@@ -1,5 +1,5 @@
 //
-//  GameTests.swift
+//  MatchTests.swift
 //  SquashMarkerTests
 //
 //  Created by Jamil Nawaz on 08/02/2018.
@@ -8,10 +8,10 @@
 
 import XCTest
 
-class GameTests: XCTestCase {
+class MatchTests: XCTestCase {
     
-    let player1 = SMPlayer()
-    let player2 = SMPlayer()
+    let player1 = SMPlayer("Jimi")
+    let player2 = SMPlayer("Jimi Opponent")
     
     override func setUp() {
         super.setUp()
@@ -21,6 +21,14 @@ class GameTests: XCTestCase {
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
+    }
+    
+    func testMatchSetup() {
+        let match = SMMatch(player1, player2, .bestOf3)
+        XCTAssertEqual(match.totalGames(), 3)
+        
+        let match1 = SMMatch(player1, player2)
+        XCTAssertEqual(match1.totalGames(), 5)
     }
     
 }
