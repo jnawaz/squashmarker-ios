@@ -20,6 +20,7 @@
 		8D17E40B202C6DC700993F06 /* SMPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D17E409202C6DC700993F06 /* SMPlayer.swift */; };
 		8D17E40D202C6DD900993F06 /* SMGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D17E40C202C6DD900993F06 /* SMGame.swift */; };
 		8D17E40E202C6DD900993F06 /* SMGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D17E40C202C6DD900993F06 /* SMGame.swift */; };
+		8D17E411202C83A300993F06 /* PlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D17E410202C83A300993F06 /* PlayerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		8D17E405202C6C8E00993F06 /* GameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTests.swift; sourceTree = "<group>"; };
 		8D17E409202C6DC700993F06 /* SMPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMPlayer.swift; sourceTree = "<group>"; };
 		8D17E40C202C6DD900993F06 /* SMGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMGame.swift; sourceTree = "<group>"; };
+		8D17E410202C83A300993F06 /* PlayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 		8D17E3EB202C685900993F06 /* SquashMarkerTests */ = {
 			isa = PBXGroup;
 			children = (
+				8D17E40F202C821C00993F06 /* PlayerTests */,
 				8D17E3EC202C685900993F06 /* SquashMarkerTests.swift */,
 				8D17E3EE202C685900993F06 /* Info.plist */,
 				8D17E405202C6C8E00993F06 /* GameTests.swift */,
@@ -153,6 +156,14 @@
 				8D17E409202C6DC700993F06 /* SMPlayer.swift */,
 			);
 			path = Player;
+			sourceTree = "<group>";
+		};
+		8D17E40F202C821C00993F06 /* PlayerTests */ = {
+			isa = PBXGroup;
+			children = (
+				8D17E410202C83A300993F06 /* PlayerTests.swift */,
+			);
+			path = PlayerTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,6 +312,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D17E411202C83A300993F06 /* PlayerTests.swift in Sources */,
 				8D17E3ED202C685900993F06 /* SquashMarkerTests.swift in Sources */,
 				8D17E40E202C6DD900993F06 /* SMGame.swift in Sources */,
 				8D17E40B202C6DC700993F06 /* SMPlayer.swift in Sources */,

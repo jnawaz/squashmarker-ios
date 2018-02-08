@@ -10,4 +10,9 @@ import UIKit
 
 class SMPlayer: NSObject {
 
+    let name: String
+    
+    init(_ playerName: String? = "") {
+        name = playerName!
+    }
 }
