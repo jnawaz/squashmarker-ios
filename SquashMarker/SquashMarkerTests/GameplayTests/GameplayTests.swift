@@ -23,8 +23,20 @@ class GameplayTests: XCTestCase {
         super.tearDown()
     }
     
-    func testSwapPlayerServing() {
+    // English Scoring Tests
+    func testHandout() {
         
     }
     
+    func testScoreIncrement() {
+        
+    }
+    
+    func testGameWon() {
+        
+    }
+    
+    func testScoringTo() {
+        
+    }
 }
