@@ -58,7 +58,14 @@ class GameplayTests: XCTestCase {
     }
     
     func testGameWon() {
+        match = SMMatch(player1, player2, .bestOf5, .American)
+        currentGame = match?.gamesArray[0]
         
+        currentGame?.score = [14, 2]
+        currentGame?.server = player1
+        currentGame?.incrementScore(player1)
+        
+        XCTAssertEqual((currentGame?.score)!, [15, 2])
     }
     
 }
