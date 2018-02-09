@@ -20,6 +20,8 @@
 		8D17E40D202C6DD900993F06 /* SMGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D17E40C202C6DD900993F06 /* SMGame.swift */; };
 		8D17E40E202C6DD900993F06 /* SMGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D17E40C202C6DD900993F06 /* SMGame.swift */; };
 		8D17E411202C83A300993F06 /* PlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D17E410202C83A300993F06 /* PlayerTests.swift */; };
+		8DB1318B202DC8CE0036DB6E /* SMMatchProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB1318A202DC8CE0036DB6E /* SMMatchProtocol.swift */; };
+		8DB1318C202DC8CE0036DB6E /* SMMatchProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB1318A202DC8CE0036DB6E /* SMMatchProtocol.swift */; };
 		8DCB7FB7202C87B40052E20A /* GameplayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCB7FB6202C87B40052E20A /* GameplayTests.swift */; };
 		8DCB7FBA202C886A0052E20A /* MatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCB7FB9202C886A0052E20A /* MatchTests.swift */; };
 		8DCB7FBD202C892A0052E20A /* SMMatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCB7FBC202C892A0052E20A /* SMMatch.swift */; };
@@ -61,6 +63,7 @@
 		8D17E409202C6DC700993F06 /* SMPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMPlayer.swift; sourceTree = "<group>"; };
 		8D17E40C202C6DD900993F06 /* SMGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMGame.swift; sourceTree = "<group>"; };
 		8D17E410202C83A300993F06 /* PlayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTests.swift; sourceTree = "<group>"; };
+		8DB1318A202DC8CE0036DB6E /* SMMatchProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMMatchProtocol.swift; sourceTree = "<group>"; };
 		8DCB7FB6202C87B40052E20A /* GameplayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameplayTests.swift; sourceTree = "<group>"; };
 		8DCB7FB9202C886A0052E20A /* MatchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchTests.swift; sourceTree = "<group>"; };
 		8DCB7FBC202C892A0052E20A /* SMMatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMMatch.swift; sourceTree = "<group>"; };
@@ -193,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				8DCB7FBC202C892A0052E20A /* SMMatch.swift */,
+				8DB1318A202DC8CE0036DB6E /* SMMatchProtocol.swift */,
 			);
 			path = Match;
 			sourceTree = "<group>";
@@ -335,6 +339,7 @@
 				8D17E40D202C6DD900993F06 /* SMGame.swift in Sources */,
 				8D17E3DD202C685900993F06 /* SquashMarker.xcdatamodeld in Sources */,
 				8DCB7FBD202C892A0052E20A /* SMMatch.swift in Sources */,
+				8DB1318B202DC8CE0036DB6E /* SMMatchProtocol.swift in Sources */,
 				8D17E40A202C6DC700993F06 /* SMPlayer.swift in Sources */,
 				8D17E3D5202C685900993F06 /* AppDelegate.swift in Sources */,
 			);
@@ -351,6 +356,7 @@
 				8DCB7FB7202C87B40052E20A /* GameplayTests.swift in Sources */,
 				8DCB7FBE202C892A0052E20A /* SMMatch.swift in Sources */,
 				8D17E40B202C6DC700993F06 /* SMPlayer.swift in Sources */,
+				8DB1318C202DC8CE0036DB6E /* SMMatchProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

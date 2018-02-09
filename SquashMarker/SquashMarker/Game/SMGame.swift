@@ -16,8 +16,11 @@ class SMGame: NSObject {
     var score: [Int]?
     var scoringStyle: SMScoringMethod!
     
-    init(_ scoringMethod: SMScoringMethod) {
+    var matchDelegate: SMMatchProtocol
+    
+    init(_ scoringMethod: SMScoringMethod, matchProtocol: SMMatchProtocol) {
         scoringStyle = scoringMethod
+        matchDelegate = matchProtocol
     }
     
     /// incrementScore handles the incrementing of scores
@@ -49,8 +52,34 @@ class SMGame: NSObject {
         } else {
             score![1] = score![1] + 1
         }
+        
+        checkGameFinish()
     }
     
-    
-    
+    func checkGameFinish() {
+        switch scoringStyle {
+        case .English:
+            if score![0] == 9 || score![1] == 9 {
+                matchDelegate.progressToNextGame()
+                break
+            }
+        default:
+            let scoring = matchDelegate.getScoringTo()
+            // American Scoring
+            switch scoring {
+            case .eleven:
+                if score![0] == 11 || score![1] == 11 {
+                    matchDelegate.progressToNextGame()
+                }
+                break
+            case .fifteen:
+                if score![0] == 15 || score![1] == 15 {
+                    matchDelegate.progressToNextGame()
+                }
+                break
+            default:
+                break
+            }
+        }
+    }
 }

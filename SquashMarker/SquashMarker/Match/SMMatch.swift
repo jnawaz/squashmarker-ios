@@ -24,16 +24,17 @@ enum SMScoringTo {
     case fifteen
 }
 
-class SMMatch: NSObject {
+class SMMatch: NSObject, SMMatchProtocol {
     
-    let bestOf: SMBestOf
-    let gamesArray: [SMGame]
-    let scoringMethod: SMScoringMethod?
-    let scoringTo: SMScoringTo?
+    var bestOf: SMBestOf!
+    var gamesArray: [SMGame]!
+    var currentGame: SMGame!
+    var currentGameIndex: Int = 0
+    var scoringMethod: SMScoringMethod?
+    var scoringTo: SMScoringTo?
     
-    let home: SMPlayer
-    let away: SMPlayer
-    
+    var home: SMPlayer!
+    var away: SMPlayer!
     
     /// Match initialisation method taking two players
     /// by default the first parameter is the home team player
@@ -44,6 +45,8 @@ class SMMatch: NSObject {
     ///   - scoringStyle: English Method (default) or American
     ///   - ppg: Points per game
     init(_ homePlayer: SMPlayer, _ awayPlayer: SMPlayer, _ totalGames: SMBestOf? = .bestOf5, _ scoringStyle: SMScoringMethod? = .English, ppg: SMScoringTo? = .fifteen) {
+        
+        super.init()
         
         home = homePlayer
         homePlayer.isHomePlayer = true
@@ -62,22 +65,36 @@ class SMMatch: NSObject {
         switch bestOf {
         case .bestOf3:
             gamesArray = [
-                SMGame(scoringMethod!),
-                SMGame(scoringMethod!),
-                SMGame(scoringMethod!)
+                SMGame(scoringMethod!, matchProtocol: self),
+                SMGame(scoringMethod!, matchProtocol: self),
+                SMGame(scoringMethod!, matchProtocol: self)
             ]
         default:
             gamesArray = [
-                SMGame(scoringMethod!),
-                SMGame(scoringMethod!),
-                SMGame(scoringMethod!),
-                SMGame(scoringMethod!),
-                SMGame(scoringMethod!)
+                SMGame(scoringMethod!, matchProtocol: self),
+                SMGame(scoringMethod!, matchProtocol: self),
+                SMGame(scoringMethod!, matchProtocol: self),
+                SMGame(scoringMethod!, matchProtocol: self),
+                SMGame(scoringMethod!, matchProtocol: self)
             ]
         }
+        
+        //default current game to the first one
+        currentGame = gamesArray[currentGameIndex]
     }
     
     func totalGames() -> Int {
         return gamesArray.count
+    }
+    
+    
+    /// Tracks and keeps progress of the current game
+    func progressToNextGame() {
+        currentGameIndex += 1
+        currentGame = gamesArray[currentGameIndex]
+    }
+    
+    func getScoringTo() -> SMScoringTo {
+        return scoringTo!
     }
 }
