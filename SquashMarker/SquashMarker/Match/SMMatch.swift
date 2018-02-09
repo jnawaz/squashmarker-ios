@@ -18,28 +18,62 @@ enum SMScoringMethod {
     case American
 }
 
+enum SMScoringTo {
+    case nine
+    case eleven
+    case fifteen
+}
+
 class SMMatch: NSObject {
     
     let bestOf: SMBestOf
     let gamesArray: [SMGame]
     let scoringMethod: SMScoringMethod?
+    let scoringTo: SMScoringTo?
     
     let home: SMPlayer
     let away: SMPlayer
     
-    init(_ homePlayer: SMPlayer, _ awayPlayer: SMPlayer, _ totalGames: SMBestOf? = .bestOf5, _ scoringStyle: SMScoringMethod? = .English) {
+    
+    /// Match initialisation method taking two players
+    /// by default the first parameter is the home team player
+    /// - Parameters:
+    ///   - homePlayer: The home team player
+    ///   - awayPlayer: The away team player
+    ///   - totalGames: Best of 5 (default) or Best of 3
+    ///   - scoringStyle: English Method (default) or American
+    ///   - ppg: Points per game
+    init(_ homePlayer: SMPlayer, _ awayPlayer: SMPlayer, _ totalGames: SMBestOf? = .bestOf5, _ scoringStyle: SMScoringMethod? = .English, ppg: SMScoringTo? = .fifteen) {
         
         home = homePlayer
+        homePlayer.isHomePlayer = true
         away = awayPlayer
+        awayPlayer.isHomePlayer = false
         
         scoringMethod = scoringStyle
+        
+        if scoringMethod == .English {
+            scoringTo = .nine
+        } else {
+            scoringTo = ppg
+        }
         
         bestOf = totalGames!
         switch bestOf {
         case .bestOf3:
-            gamesArray = [SMGame(), SMGame(), SMGame()]
+            gamesArray = [
+                SMGame(scoringMethod!),
+                SMGame(scoringMethod!),
+                SMGame(scoringMethod!)
+            ]
         default:
-            gamesArray = [SMGame(), SMGame(), SMGame(), SMGame(), SMGame()]
+            gamesArray = [
+                SMGame(scoringMethod!),
+                SMGame(scoringMethod!),
+                SMGame(scoringMethod!),
+                SMGame(scoringMethod!),
+                SMGame(scoringMethod!)
+            ]
         }
     }
     

@@ -10,9 +10,10 @@ import UIKit
 
 class SMPlayer: NSObject {
 
-    let name: String
+    var name: String
+    var isHomePlayer: Bool?
     
-    init(_ playerName: String? = "") {
-        name = playerName!
+    init(_ playerName: String) {
+        name = playerName
     }
 }

@@ -21,7 +21,7 @@ class PlayerTests: XCTestCase {
     }
     
     func testPlayerNameSetup() {
-        let player1 = SMPlayer()
+        let player1 = SMPlayer("")
         XCTAssertEqual(player1.name, "")
         
         let player2 = SMPlayer("Jimi")
