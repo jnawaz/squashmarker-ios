@@ -57,6 +57,10 @@ class SMGame: NSObject {
         checkGameFinish(player)
     }
     
+    
+    /// Method checks if a game is finished by checking the score based on scoring type English or American
+    /// and then progresses the match to the next game.
+    /// - Parameter player: The player who most recently scored a point.
     func checkGameFinish(_ player: SMPlayer) {
         switch scoringStyle {
         case .English:

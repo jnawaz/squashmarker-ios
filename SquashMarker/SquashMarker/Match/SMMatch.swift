@@ -83,12 +83,19 @@ class SMMatch: NSObject, SMMatchProtocol {
         currentGame = gamesArray[currentGameIndex]
     }
     
+    
+    /// Returns the total number of games in a match
+    /// 5 for best of 5 and 3 for best of 3
+    /// - Returns: Total number of games in a match
     func totalGames() -> Int {
         return gamesArray.count
     }
     
     
-    /// Tracks and keeps progress of the current game
+    
+    /// Utility method to progress to the next game
+    ///
+    /// - Parameter server: The player that won the game and will begin the next game by serving
     func progressToNextGame(_ server: SMPlayer!) {
         currentGameIndex += 1
         currentGame = gamesArray[currentGameIndex]
@@ -96,6 +103,10 @@ class SMMatch: NSObject, SMMatchProtocol {
         
     }
     
+    
+    /// Scoring to 11 (English scoring), 11 or 15 if American scoring
+    ///
+    /// - Returns: Enum denoting max points a game is played to.
     func getScoringTo() -> SMScoringTo {
         return scoringTo!
     }
