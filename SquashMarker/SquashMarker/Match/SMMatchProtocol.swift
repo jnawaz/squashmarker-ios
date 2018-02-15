@@ -9,6 +9,6 @@
 import UIKit
 
 protocol SMMatchProtocol {
-    func progressToNextGame()
+    func progressToNextGame(_ server: SMPlayer!)
     func getScoringTo() -> SMScoringTo
 }

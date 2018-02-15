@@ -77,6 +77,9 @@ class GameplayTests: XCTestCase {
         currentGame?.incrementScore(player1)
         
         XCTAssertEqual((match?.currentGame?.score)!, [0, 0])
+        
+        /// Test Person who won the game is serving
+        XCTAssertEqual(match?.currentGame?.server, player1)
     }
     
 }

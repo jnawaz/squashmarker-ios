@@ -54,14 +54,14 @@ class SMGame: NSObject {
             score![1] = score![1] + 1
         }
         
-        checkGameFinish()
+        checkGameFinish(player)
     }
     
-    func checkGameFinish() {
+    func checkGameFinish(_ player: SMPlayer) {
         switch scoringStyle {
         case .English:
             if score![0] == 9 || score![1] == 9 {
-                matchDelegate.progressToNextGame()
+                matchDelegate.progressToNextGame(player)
                 break
             }
         default:
@@ -70,12 +70,12 @@ class SMGame: NSObject {
             switch scoring {
             case .eleven:
                 if score![0] == 11 || score![1] == 11 {
-                    matchDelegate.progressToNextGame()
+                    matchDelegate.progressToNextGame(player)
                 }
                 break
             case .fifteen:
                 if score![0] == 15 || score![1] == 15 {
-                    matchDelegate.progressToNextGame()
+                    matchDelegate.progressToNextGame(player)
                 }
                 break
             default:

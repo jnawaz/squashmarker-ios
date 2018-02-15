@@ -89,9 +89,11 @@ class SMMatch: NSObject, SMMatchProtocol {
     
     
     /// Tracks and keeps progress of the current game
-    func progressToNextGame() {
+    func progressToNextGame(_ server: SMPlayer!) {
         currentGameIndex += 1
         currentGame = gamesArray[currentGameIndex]
+        currentGame.server = server
+        
     }
     
     func getScoringTo() -> SMScoringTo {
