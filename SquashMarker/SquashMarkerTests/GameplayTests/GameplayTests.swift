@@ -81,13 +81,21 @@ class GameplayTests: XCTestCase {
         /// Test Person who won the game is serving
         XCTAssertEqual(match?.currentGame?.server, player1)
     }
-    
+
+    /// Applicable only in american scoring
     func testTieBreakNextPointWins() {
         
     }
     
+    /// Applicable only in american scoring
     func testTieBreakWinBy2Clear() {
         
     }
+    
+    /// English scoring tie break one or three points
+    func testTieBreakEnglishScoring() {
+        
+    }
+
     
 }
