@@ -21,6 +21,7 @@ class SMGame: NSObject {
     init(_ scoringMethod: SMScoringMethod, matchProtocol: SMMatchProtocol) {
         scoringStyle = scoringMethod
         matchDelegate = matchProtocol
+        score = [0, 0]
     }
     
     /// incrementScore handles the incrementing of scores
