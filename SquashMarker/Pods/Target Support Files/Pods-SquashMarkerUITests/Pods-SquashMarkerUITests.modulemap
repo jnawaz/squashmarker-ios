@@ -1,0 +1,6 @@
+framework module Pods_SquashMarkerUITests {
+  umbrella header "Pods-SquashMarkerUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

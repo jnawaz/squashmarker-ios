@@ -1,0 +1,6 @@
+framework module Pods_SquashMarker {
+  umbrella header "Pods-SquashMarker-umbrella.h"
+
+  export *
+  module * { export * }
+}
