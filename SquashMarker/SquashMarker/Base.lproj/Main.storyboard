@@ -30,6 +30,10 @@
                                     <constraint firstAttribute="height" constant="52" id="CiW-fm-flr"/>
                                 </constraints>
                                 <state key="normal" image="squash-ball"/>
+                                <connections>
+                                    <action selector="pressedMatchSetup:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TPh-So-vs7"/>
+                                    <segue destination="BrK-KK-YsR" kind="presentation" modalPresentationStyle="formSheet" id="8W3-Of-agA"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Squash Marker" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PQT-hX-JaU">
                                 <rect key="frame" x="87" y="84" width="201" height="32"/>
@@ -56,6 +60,45 @@
             </objects>
             <point key="canvasLocation" x="476" y="133.5832083958021"/>
         </scene>
+        <!--Match Settings View Controller-->
+        <scene sceneID="hSS-lW-gJu">
+            <objects>
+                <viewController modalPresentationStyle="formSheet" id="BrK-KK-YsR" customClass="MatchSettingsViewController" customModule="SquashMarker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Tuf-iL-gg7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zOh-C5-b3y">
+                                <rect key="frame" x="125" y="613" width="125" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="125" id="gFs-xz-Cdi"/>
+                                    <constraint firstAttribute="height" constant="34" id="vuD-7V-uT3"/>
+                                </constraints>
+                                <state key="normal" image="dismiss-button"/>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LNU-2u-ye1">
+                                <rect key="frame" x="20" y="40" width="335" height="553"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.17538294196128845" green="0.19321703910827637" blue="0.25877097249031067" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2OH-RW-F8L" firstAttribute="bottom" secondItem="zOh-C5-b3y" secondAttribute="bottom" constant="20" id="9kO-8C-IFL"/>
+                            <constraint firstItem="LNU-2u-ye1" firstAttribute="leading" secondItem="2OH-RW-F8L" secondAttribute="leading" constant="20" id="IVG-Vh-syK"/>
+                            <constraint firstItem="LNU-2u-ye1" firstAttribute="centerX" secondItem="Tuf-iL-gg7" secondAttribute="centerX" id="MCw-2e-2i7"/>
+                            <constraint firstItem="LNU-2u-ye1" firstAttribute="top" secondItem="2OH-RW-F8L" secondAttribute="top" constant="20" id="Wdg-Dh-8G4"/>
+                            <constraint firstItem="zOh-C5-b3y" firstAttribute="top" secondItem="LNU-2u-ye1" secondAttribute="bottom" constant="20" id="aRw-qN-COA"/>
+                            <constraint firstItem="2OH-RW-F8L" firstAttribute="trailing" secondItem="LNU-2u-ye1" secondAttribute="trailing" constant="20" id="cjU-Jv-UVl"/>
+                            <constraint firstItem="zOh-C5-b3y" firstAttribute="centerX" secondItem="Tuf-iL-gg7" secondAttribute="centerX" id="grv-tO-0Ho"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2OH-RW-F8L"/>
+                    </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="100" height="100"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X4x-Zz-dFW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1181.5999999999999" y="133.5832083958021"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="OTg-Pf-jW5">
             <objects>
@@ -76,6 +119,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="dismiss-button" width="125" height="34"/>
         <image name="squash-ball" width="206" height="206"/>
     </resources>
 </document>

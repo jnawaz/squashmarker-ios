@@ -80,6 +80,8 @@
 		8D4181BA20367F9B00D81AE3 /* OpenSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8D4181A720367F9A00D81AE3 /* OpenSans-LightItalic.ttf */; };
 		8D4181BB20367F9B00D81AE3 /* OpenSans-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8D4181A820367F9A00D81AE3 /* OpenSans-SemiBoldItalic.ttf */; };
 		8D4181BC20367F9B00D81AE3 /* OpenSans-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8D4181A820367F9A00D81AE3 /* OpenSans-SemiBoldItalic.ttf */; };
+		8D4181BF2036817C00D81AE3 /* MatchSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4181BE2036817C00D81AE3 /* MatchSettingsViewController.swift */; };
+		8D4181C02036817C00D81AE3 /* MatchSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4181BE2036817C00D81AE3 /* MatchSettingsViewController.swift */; };
 		8DB1318B202DC8CE0036DB6E /* SMMatchProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB1318A202DC8CE0036DB6E /* SMMatchProtocol.swift */; };
 		8DB1318C202DC8CE0036DB6E /* SMMatchProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB1318A202DC8CE0036DB6E /* SMMatchProtocol.swift */; };
 		8DCB7FB7202C87B40052E20A /* GameplayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCB7FB6202C87B40052E20A /* GameplayTests.swift */; };
@@ -163,6 +165,7 @@
 		8D4181A620367F9A00D81AE3 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		8D4181A720367F9A00D81AE3 /* OpenSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-LightItalic.ttf"; sourceTree = "<group>"; };
 		8D4181A820367F9A00D81AE3 /* OpenSans-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		8D4181BE2036817C00D81AE3 /* MatchSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchSettingsViewController.swift; sourceTree = "<group>"; };
 		8DB1318A202DC8CE0036DB6E /* SMMatchProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMMatchProtocol.swift; sourceTree = "<group>"; };
 		8DCB7FB6202C87B40052E20A /* GameplayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameplayTests.swift; sourceTree = "<group>"; };
 		8DCB7FB9202C886A0052E20A /* MatchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchTests.swift; sourceTree = "<group>"; };
@@ -307,6 +310,7 @@
 		8D41815C2036712C00D81AE3 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				8D4181BD2036815B00D81AE3 /* Match Config */,
 				8D41815E2036714100D81AE3 /* In Match */,
 				8D41815D2036713500D81AE3 /* Match Setup */,
 			);
@@ -385,6 +389,14 @@
 				8D4181A820367F9A00D81AE3 /* OpenSans-SemiBoldItalic.ttf */,
 			);
 			path = OpenSans;
+			sourceTree = "<group>";
+		};
+		8D4181BD2036815B00D81AE3 /* Match Config */ = {
+			isa = PBXGroup;
+			children = (
+				8D4181BE2036817C00D81AE3 /* MatchSettingsViewController.swift */,
+			);
+			path = "Match Config";
 			sourceTree = "<group>";
 		};
 		8DCB7FB5202C879A0052E20A /* GameplayTests */ = {
@@ -796,6 +808,7 @@
 				8DCB7FBD202C892A0052E20A /* SMMatch.swift in Sources */,
 				8DB1318B202DC8CE0036DB6E /* SMMatchProtocol.swift in Sources */,
 				8D41816420367C2700D81AE3 /* Extensions.swift in Sources */,
+				8D4181BF2036817C00D81AE3 /* MatchSettingsViewController.swift in Sources */,
 				8D17E40A202C6DC700993F06 /* SMPlayer.swift in Sources */,
 				8DE78EEC2036692F00B1CB9E /* SMColors.swift in Sources */,
 				8D4181602036716700D81AE3 /* MatchSetupViewController.swift in Sources */,
@@ -819,6 +832,7 @@
 				8D17E40B202C6DC700993F06 /* SMPlayer.swift in Sources */,
 				8D4181612036716700D81AE3 /* MatchSetupViewController.swift in Sources */,
 				8DB1318C202DC8CE0036DB6E /* SMMatchProtocol.swift in Sources */,
+				8D4181C02036817C00D81AE3 /* MatchSettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
