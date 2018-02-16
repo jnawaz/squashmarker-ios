@@ -30,6 +30,8 @@
 		8DE78EE62036494700B1CB9E /* SMEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE78EE42036494700B1CB9E /* SMEnums.swift */; };
 		8DE78EE82036678D00B1CB9E /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 8DE78EE72036678D00B1CB9E /* Fonts */; };
 		8DE78EE92036678D00B1CB9E /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 8DE78EE72036678D00B1CB9E /* Fonts */; };
+		8DE78EEC2036692F00B1CB9E /* SMColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE78EEB2036692F00B1CB9E /* SMColors.swift */; };
+		8DE78EED2036692F00B1CB9E /* SMColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE78EEB2036692F00B1CB9E /* SMColors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,7 @@
 		8DCB7FBC202C892A0052E20A /* SMMatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMMatch.swift; sourceTree = "<group>"; };
 		8DE78EE42036494700B1CB9E /* SMEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMEnums.swift; sourceTree = "<group>"; };
 		8DE78EE72036678D00B1CB9E /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
+		8DE78EEB2036692F00B1CB9E /* SMColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMColors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +126,7 @@
 		8D17E3D3202C685900993F06 /* SquashMarker */ = {
 			isa = PBXGroup;
 			children = (
+				8DE78EEA2036690A00B1CB9E /* Colours */,
 				8DE78EE72036678D00B1CB9E /* Fonts */,
 				8DE78EE32036492C00B1CB9E /* Enums */,
 				8DCB7FBB202C891A0052E20A /* Match */,
@@ -215,6 +219,14 @@
 				8DE78EE42036494700B1CB9E /* SMEnums.swift */,
 			);
 			path = Enums;
+			sourceTree = "<group>";
+		};
+		8DE78EEA2036690A00B1CB9E /* Colours */ = {
+			isa = PBXGroup;
+			children = (
+				8DE78EEB2036692F00B1CB9E /* SMColors.swift */,
+			);
+			path = Colours;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -360,6 +372,7 @@
 				8DCB7FBD202C892A0052E20A /* SMMatch.swift in Sources */,
 				8DB1318B202DC8CE0036DB6E /* SMMatchProtocol.swift in Sources */,
 				8D17E40A202C6DC700993F06 /* SMPlayer.swift in Sources */,
+				8DE78EEC2036692F00B1CB9E /* SMColors.swift in Sources */,
 				8D17E3D5202C685900993F06 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -375,6 +388,7 @@
 				8DCB7FB7202C87B40052E20A /* GameplayTests.swift in Sources */,
 				8DE78EE62036494700B1CB9E /* SMEnums.swift in Sources */,
 				8DCB7FBE202C892A0052E20A /* SMMatch.swift in Sources */,
+				8DE78EED2036692F00B1CB9E /* SMColors.swift in Sources */,
 				8D17E40B202C6DC700993F06 /* SMPlayer.swift in Sources */,
 				8DB1318C202DC8CE0036DB6E /* SMMatchProtocol.swift in Sources */,
 			);
