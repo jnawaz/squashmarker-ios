@@ -31,4 +31,19 @@ class MatchTests: XCTestCase {
         XCTAssertEqual(match1.totalGames(), 5)
     }
     
+    func testMatchWon() {
+        let match = SMMatch(player1, player2, .bestOf5, .American)
+        match.gamesArray[0].score = [15, 14]
+        match.homeGameCount = 1
+        
+        match.gamesArray[1].score = [15, 14]
+        match.homeGameCount = 2
+        
+        match.gamesArray[2].score = [14, 7]
+        match.gamesArray[2].server = player1
+        match.gamesArray[2].incrementScore(player1)
+        XCTAssert(match.homeGameCount == 3)
+        
+    }
+    
 }

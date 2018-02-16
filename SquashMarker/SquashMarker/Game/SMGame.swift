@@ -120,6 +120,7 @@ class SMGame: NSObject {
                 break
             }
         }
+        
     }
     
     

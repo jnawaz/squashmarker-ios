@@ -18,7 +18,10 @@ class SMMatch: NSObject, SMMatchProtocol {
     var scoringTo: SMScoringTo?
     
     var home: SMPlayer!
+    var homeGameCount = 0
+    
     var away: SMPlayer!
+    var awayGameCount = 0
     
     /// Match initialisation method taking two players
     /// by default the first parameter is the home team player
@@ -81,9 +84,21 @@ class SMMatch: NSObject, SMMatchProtocol {
     ///
     /// - Parameter server: The player that won the game and will begin the next game by serving
     func progressToNextGame(_ server: SMPlayer!) {
+        
         currentGameIndex += 1
         currentGame = gamesArray[currentGameIndex]
         currentGame.server = server
+        
+        if (server?.isHomePlayer)! {
+            homeGameCount += 1
+        } else {
+            awayGameCount += 1
+        }
+        
+        let winner = checkMatchWon()
+        if winner != nil {
+            
+        }
         
     }
     
@@ -93,5 +108,33 @@ class SMMatch: NSObject, SMMatchProtocol {
     /// - Returns: Enum denoting max points a game is played to.
     func getScoringTo() -> SMScoringTo {
         return scoringTo!
+    }
+    
+    
+    /// Determines who won the match
+    ///
+    /// - Returns: Return the player who won the match
+    func checkMatchWon() -> SMPlayer? {
+        
+        var playerWon: SMPlayer? = nil
+        
+        switch bestOf {
+        case .bestOf3:
+            if homeGameCount == 2 {
+                playerWon = home
+            } else if awayGameCount == 2 {
+                playerWon = away
+            }
+            break
+        default:
+            if homeGameCount == 3 {
+                playerWon = home
+            } else if awayGameCount == 3 {
+                playerWon = away
+            }
+            break
+        }
+        
+        return playerWon
     }
 }
