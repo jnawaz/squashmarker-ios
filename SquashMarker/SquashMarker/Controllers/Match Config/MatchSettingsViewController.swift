@@ -9,11 +9,16 @@
 import UIKit
 
 class MatchSettingsViewController: UIViewController {
-
+    
+    @IBOutlet weak var matchSetupTable: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        roundTableCorners()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,6 +28,11 @@ class MatchSettingsViewController: UIViewController {
     
     @IBAction func dismissController(_ sender: Any) {
         dismiss(animated: true, completion: nil)
+    }
+    
+    // MARK: Table Visuals
+    func roundTableCorners() {
+        matchSetupTable.layer.cornerRadius = 8
     }
     
 }

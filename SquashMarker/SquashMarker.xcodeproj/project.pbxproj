@@ -82,12 +82,16 @@
 		8D4181BC20367F9B00D81AE3 /* OpenSans-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8D4181A820367F9A00D81AE3 /* OpenSans-SemiBoldItalic.ttf */; };
 		8D4181BF2036817C00D81AE3 /* MatchSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4181BE2036817C00D81AE3 /* MatchSettingsViewController.swift */; };
 		8D4181C02036817C00D81AE3 /* MatchSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4181BE2036817C00D81AE3 /* MatchSettingsViewController.swift */; };
+		8D4181C42036E5D000D81AE3 /* SMTableViewDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4181C32036E5D000D81AE3 /* SMTableViewDatasource.swift */; };
+		8D4181C52036E5D000D81AE3 /* SMTableViewDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4181C32036E5D000D81AE3 /* SMTableViewDatasource.swift */; };
 		8DB1318B202DC8CE0036DB6E /* SMMatchProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB1318A202DC8CE0036DB6E /* SMMatchProtocol.swift */; };
 		8DB1318C202DC8CE0036DB6E /* SMMatchProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB1318A202DC8CE0036DB6E /* SMMatchProtocol.swift */; };
 		8DCB7FB7202C87B40052E20A /* GameplayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCB7FB6202C87B40052E20A /* GameplayTests.swift */; };
 		8DCB7FBA202C886A0052E20A /* MatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCB7FB9202C886A0052E20A /* MatchTests.swift */; };
 		8DCB7FBD202C892A0052E20A /* SMMatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCB7FBC202C892A0052E20A /* SMMatch.swift */; };
 		8DCB7FBE202C892A0052E20A /* SMMatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCB7FBC202C892A0052E20A /* SMMatch.swift */; };
+		8DDBD5FD2036EF6600960140 /* SMSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDBD5FC2036EF6600960140 /* SMSettingTableViewCell.swift */; };
+		8DDBD5FE2036EF6600960140 /* SMSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDBD5FC2036EF6600960140 /* SMSettingTableViewCell.swift */; };
 		8DE78EE52036494700B1CB9E /* SMEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE78EE42036494700B1CB9E /* SMEnums.swift */; };
 		8DE78EE62036494700B1CB9E /* SMEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE78EE42036494700B1CB9E /* SMEnums.swift */; };
 		8DE78EEC2036692F00B1CB9E /* SMColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE78EEB2036692F00B1CB9E /* SMColors.swift */; };
@@ -166,10 +170,12 @@
 		8D4181A720367F9A00D81AE3 /* OpenSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-LightItalic.ttf"; sourceTree = "<group>"; };
 		8D4181A820367F9A00D81AE3 /* OpenSans-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		8D4181BE2036817C00D81AE3 /* MatchSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchSettingsViewController.swift; sourceTree = "<group>"; };
+		8D4181C32036E5D000D81AE3 /* SMTableViewDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMTableViewDatasource.swift; sourceTree = "<group>"; };
 		8DB1318A202DC8CE0036DB6E /* SMMatchProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMMatchProtocol.swift; sourceTree = "<group>"; };
 		8DCB7FB6202C87B40052E20A /* GameplayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameplayTests.swift; sourceTree = "<group>"; };
 		8DCB7FB9202C886A0052E20A /* MatchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchTests.swift; sourceTree = "<group>"; };
 		8DCB7FBC202C892A0052E20A /* SMMatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMMatch.swift; sourceTree = "<group>"; };
+		8DDBD5FC2036EF6600960140 /* SMSettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMSettingTableViewCell.swift; sourceTree = "<group>"; };
 		8DE78EE42036494700B1CB9E /* SMEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMEnums.swift; sourceTree = "<group>"; };
 		8DE78EEB2036692F00B1CB9E /* SMColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMColors.swift; sourceTree = "<group>"; };
 		94BAC97F2ED8DF0C300BE488 /* Pods-SquashMarkerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SquashMarkerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SquashMarkerUITests/Pods-SquashMarkerUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -394,9 +400,19 @@
 		8D4181BD2036815B00D81AE3 /* Match Config */ = {
 			isa = PBXGroup;
 			children = (
+				8D4181C22036E58C00D81AE3 /* TableView */,
 				8D4181BE2036817C00D81AE3 /* MatchSettingsViewController.swift */,
 			);
 			path = "Match Config";
+			sourceTree = "<group>";
+		};
+		8D4181C22036E58C00D81AE3 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				8DDBD5FB2036EF3700960140 /* TableView Cell */,
+				8D4181C32036E5D000D81AE3 /* SMTableViewDatasource.swift */,
+			);
+			path = TableView;
 			sourceTree = "<group>";
 		};
 		8DCB7FB5202C879A0052E20A /* GameplayTests */ = {
@@ -422,6 +438,14 @@
 				8DB1318A202DC8CE0036DB6E /* SMMatchProtocol.swift */,
 			);
 			path = Match;
+			sourceTree = "<group>";
+		};
+		8DDBD5FB2036EF3700960140 /* TableView Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8DDBD5FC2036EF6600960140 /* SMSettingTableViewCell.swift */,
+			);
+			path = "TableView Cell";
 			sourceTree = "<group>";
 		};
 		8DE78EE32036492C00B1CB9E /* Enums */ = {
@@ -806,6 +830,8 @@
 				8D17E40D202C6DD900993F06 /* SMGame.swift in Sources */,
 				8D17E3DD202C685900993F06 /* SquashMarker.xcdatamodeld in Sources */,
 				8DCB7FBD202C892A0052E20A /* SMMatch.swift in Sources */,
+				8D4181C42036E5D000D81AE3 /* SMTableViewDatasource.swift in Sources */,
+				8DDBD5FD2036EF6600960140 /* SMSettingTableViewCell.swift in Sources */,
 				8DB1318B202DC8CE0036DB6E /* SMMatchProtocol.swift in Sources */,
 				8D41816420367C2700D81AE3 /* Extensions.swift in Sources */,
 				8D4181BF2036817C00D81AE3 /* MatchSettingsViewController.swift in Sources */,
@@ -821,7 +847,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DCB7FBA202C886A0052E20A /* MatchTests.swift in Sources */,
+				8DDBD5FE2036EF6600960140 /* SMSettingTableViewCell.swift in Sources */,
 				8D17E411202C83A300993F06 /* PlayerTests.swift in Sources */,
+				8D4181C52036E5D000D81AE3 /* SMTableViewDatasource.swift in Sources */,
 				8D17E3ED202C685900993F06 /* SquashMarkerTests.swift in Sources */,
 				8D17E40E202C6DD900993F06 /* SMGame.swift in Sources */,
 				8DCB7FB7202C87B40052E20A /* GameplayTests.swift in Sources */,
