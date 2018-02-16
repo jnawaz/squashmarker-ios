@@ -12,6 +12,7 @@ class MatchSettingsViewController: UIViewController {
     
     @IBOutlet weak var matchSetupTable: UITableView!
     var dataSource: SMTableViewDatasource!
+    var delegate: SMTableViewDelegate!
     
     
     override func viewDidLoad() {
@@ -21,6 +22,22 @@ class MatchSettingsViewController: UIViewController {
         
         roundTableCorners()
         
+        setupDataSourceAndDelegate()
+        
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func dismissController(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
+    /// Setup the datasource and delegate for the method which is in a separate class
+    func setupDataSourceAndDelegate() {
         var tableArray = [SMCellData]()
         
         let player1 = SMCellData(cellType: .playerDetails)
@@ -41,19 +58,9 @@ class MatchSettingsViewController: UIViewController {
         dataSource = SMTableViewDatasource(data: tableArray)
         matchSetupTable.dataSource = dataSource
         
-        let tableDelegate = SMTableViewDelegate()
-        matchSetupTable.delegate = tableDelegate
+        delegate = SMTableViewDelegate()
+        matchSetupTable.delegate = delegate
         
-        print("check ")
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    @IBAction func dismissController(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
     }
     
     // MARK: Table Visuals
