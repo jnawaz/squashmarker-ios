@@ -16,6 +16,9 @@ class SMGame: NSObject {
     var score: [Int]?
     var scoringStyle: SMScoringMethod!
     
+    var winBy: SMTieBreakTo?
+    var tieBreak: Bool = false
+    
     var matchDelegate: SMMatchProtocol
     
     init(_ scoringMethod: SMScoringMethod, matchProtocol: SMMatchProtocol) {
@@ -58,28 +61,59 @@ class SMGame: NSObject {
     }
     
     
-    /// Method checks if a game is finished by checking the score based on scoring type English or American
+    /// Method checks if a game is finished by checking the score based on scoring type English or American, takes into account tie breaks
     /// and then progresses the match to the next game.
     /// - Parameter player: The player who most recently scored a point.
     func checkGameFinish(_ player: SMPlayer) {
         switch scoringStyle {
         case .English:
-            if score![0] == 9 || score![1] == 9 {
-                matchDelegate.progressToNextGame(player)
-                break
+            if score![0] == 8 && score![1] == 8 {
+                tieBreak = true
+            } else if tieBreak {
+                switch winBy {
+                case .oneClear?:
+                    if score![0] == 9 || score![1] == 9 {
+                        matchDelegate.progressToNextGame(player)
+                    }
+                    break
+                case .twoClear?:
+                    if score![0] == 10 || score![1] == 10 {
+                        matchDelegate.progressToNextGame(player)
+                    }
+                    break
+                default:
+                    break
+                }
+            } else {
+                if score![0] == 9 || score![1] == 9 {
+                    matchDelegate.progressToNextGame(player)
+                }
             }
+            break
         default:
             let scoring = matchDelegate.getScoringTo()
             // American Scoring
             switch scoring {
             case .eleven:
-                if score![0] == 11 || score![1] == 11 {
-                    matchDelegate.progressToNextGame(player)
+                if score![0] == 10 && score![1] == 10 {
+                    tieBreak = true
+                } else if tieBreak {
+                    workoutTieBreakScores(player)
+                } else {
+                    if score![0] == 11 || score![1] == 11 {
+                        matchDelegate.progressToNextGame(player)
+                    }
                 }
                 break
             case .fifteen:
-                if score![0] == 15 || score![1] == 15 {
-                    matchDelegate.progressToNextGame(player)
+                if score![0] == 14 && score![1] == 14 {
+                    tieBreak = true
+                } else if tieBreak {
+                    workoutTieBreakScores(player)
+                } else {
+                    if score![0] == 15 || score![1] == 15 {
+                        matchDelegate.progressToNextGame(player)
+                    }
                 }
                 break
             default:
@@ -87,4 +121,41 @@ class SMGame: NSObject {
             }
         }
     }
+    
+    
+    /// Method works out if a player is two clear or next point wins
+    ///
+    /// - Parameter player: The player who scored the point
+    func workoutTieBreakScores(_ player: SMPlayer) {
+        switch winBy {
+        case .twoClear?:
+            if twoClear() {
+                matchDelegate.progressToNextGame(player)
+            }
+            break
+        case .oneClear?:
+            if oneClear() {
+                matchDelegate.progressToNextGame(player)
+            }
+            break
+        default:
+            break
+        }
+    }
+    
+    /// Method works out if a players score is two points clear of the other player
+    ///
+    /// - Returns: true or false
+    func twoClear() -> Bool {
+        return score![0] - score![1] == 2 || score![1] - score![0] == 2
+    }
+    
+    
+    /// Methods works out if score is one ahead of the other
+    /// Useful in next point wins
+    /// - Returns: true or false
+    func oneClear() -> Bool {
+        return score![0] - score![1] == 1 || score![1] - score![0] == 1
+    }
+    
 }

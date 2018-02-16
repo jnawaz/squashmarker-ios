@@ -8,22 +8,6 @@
 
 import UIKit
 
-enum SMBestOf {
-    case bestOf3
-    case bestOf5
-}
-
-enum SMScoringMethod {
-    case English
-    case American
-}
-
-enum SMScoringTo {
-    case nine
-    case eleven
-    case fifteen
-}
-
 class SMMatch: NSObject, SMMatchProtocol {
     
     var bestOf: SMBestOf!

@@ -84,17 +84,67 @@ class GameplayTests: XCTestCase {
 
     /// Applicable only in american scoring
     func testTieBreakNextPointWins() {
+        match = SMMatch(player1, player2, .bestOf5, .American)
+        currentGame = match?.currentGame
         
+        currentGame?.score = [14, 14]
+        currentGame?.server = player1
+        currentGame?.winBy = .oneClear
+        currentGame?.tieBreak = true
+        
+        currentGame?.incrementScore(player1)
+        XCTAssertEqual(match?.currentGame, match?.gamesArray[1])
     }
     
     /// Applicable only in american scoring
     func testTieBreakWinBy2Clear() {
+        match = SMMatch(player1, player2, .bestOf5, .American)
+        currentGame = match?.currentGame
         
+        currentGame?.score = [14, 14]
+        currentGame?.server = player1
+        currentGame?.winBy = .twoClear
+        currentGame?.tieBreak = true
+        
+        currentGame?.incrementScore(player1)
+        XCTAssertEqual(match?.currentGame, match?.gamesArray[0])
+        XCTAssertEqual((match?.currentGame?.score)!, [15, 14])
+        
+        currentGame?.incrementScore(player1)
+        XCTAssertEqual(match?.currentGame, match?.gamesArray[1])
+        XCTAssertEqual((match?.currentGame.score)!, [0,0])
     }
     
     /// English scoring tie break one or three points
-    func testTieBreakEnglishScoring() {
+    func testTieBreakEnglishScoringNextPointWins() {
+        match = SMMatch(player1, player2, .bestOf5, .English)
+        currentGame = match?.currentGame
         
+        currentGame?.score = [8, 8]
+        currentGame?.tieBreak = true
+        currentGame?.server = player1
+        currentGame?.winBy = .oneClear
+        
+        currentGame?.incrementScore(player1)
+        XCTAssertEqual(match?.currentGame, match?.gamesArray[1])
+    }
+    
+    func testTieBreakEnglishScoringTo10() {
+        match = SMMatch(player1, player2, .bestOf5, .English)
+        currentGame = match?.currentGame
+        
+        currentGame?.score = [8, 8]
+        currentGame?.tieBreak = true
+        currentGame?.server = player1
+        currentGame?.winBy = .twoClear
+        
+        currentGame?.incrementScore(player1)
+        XCTAssertEqual(match?.currentGame, match?.gamesArray[0])
+        XCTAssertEqual((match?.currentGame?.score)!, [9, 8])
+        
+        currentGame?.score = [9, 8]
+        currentGame?.incrementScore(player1)
+        XCTAssertEqual(match?.currentGame, match?.gamesArray[1])
     }
 
     

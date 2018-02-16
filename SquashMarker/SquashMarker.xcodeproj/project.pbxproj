@@ -26,6 +26,8 @@
 		8DCB7FBA202C886A0052E20A /* MatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCB7FB9202C886A0052E20A /* MatchTests.swift */; };
 		8DCB7FBD202C892A0052E20A /* SMMatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCB7FBC202C892A0052E20A /* SMMatch.swift */; };
 		8DCB7FBE202C892A0052E20A /* SMMatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCB7FBC202C892A0052E20A /* SMMatch.swift */; };
+		8DE78EE52036494700B1CB9E /* SMEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE78EE42036494700B1CB9E /* SMEnums.swift */; };
+		8DE78EE62036494700B1CB9E /* SMEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE78EE42036494700B1CB9E /* SMEnums.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,7 @@
 		8DCB7FB6202C87B40052E20A /* GameplayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameplayTests.swift; sourceTree = "<group>"; };
 		8DCB7FB9202C886A0052E20A /* MatchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchTests.swift; sourceTree = "<group>"; };
 		8DCB7FBC202C892A0052E20A /* SMMatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMMatch.swift; sourceTree = "<group>"; };
+		8DE78EE42036494700B1CB9E /* SMEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMEnums.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +120,7 @@
 		8D17E3D3202C685900993F06 /* SquashMarker */ = {
 			isa = PBXGroup;
 			children = (
+				8DE78EE32036492C00B1CB9E /* Enums */,
 				8DCB7FBB202C891A0052E20A /* Match */,
 				8D17E408202C6DA900993F06 /* Player */,
 				8D17E407202C6D7F00993F06 /* Game */,
@@ -199,6 +203,14 @@
 				8DB1318A202DC8CE0036DB6E /* SMMatchProtocol.swift */,
 			);
 			path = Match;
+			sourceTree = "<group>";
+		};
+		8DE78EE32036492C00B1CB9E /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				8DE78EE42036494700B1CB9E /* SMEnums.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,6 +347,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DE78EE52036494700B1CB9E /* SMEnums.swift in Sources */,
 				8D17E3D7202C685900993F06 /* ViewController.swift in Sources */,
 				8D17E40D202C6DD900993F06 /* SMGame.swift in Sources */,
 				8D17E3DD202C685900993F06 /* SquashMarker.xcdatamodeld in Sources */,
@@ -354,6 +367,7 @@
 				8D17E3ED202C685900993F06 /* SquashMarkerTests.swift in Sources */,
 				8D17E40E202C6DD900993F06 /* SMGame.swift in Sources */,
 				8DCB7FB7202C87B40052E20A /* GameplayTests.swift in Sources */,
+				8DE78EE62036494700B1CB9E /* SMEnums.swift in Sources */,
 				8DCB7FBE202C892A0052E20A /* SMMatch.swift in Sources */,
 				8D17E40B202C6DC700993F06 /* SMPlayer.swift in Sources */,
 				8DB1318C202DC8CE0036DB6E /* SMMatchProtocol.swift in Sources */,
