@@ -92,6 +92,12 @@
 		8DCB7FBE202C892A0052E20A /* SMMatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCB7FBC202C892A0052E20A /* SMMatch.swift */; };
 		8DDBD5FD2036EF6600960140 /* SMSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDBD5FC2036EF6600960140 /* SMSettingTableViewCell.swift */; };
 		8DDBD5FE2036EF6600960140 /* SMSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDBD5FC2036EF6600960140 /* SMSettingTableViewCell.swift */; };
+		8DDBD6012036F37600960140 /* SMCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDBD6002036F37600960140 /* SMCellData.swift */; };
+		8DDBD6022036F37600960140 /* SMCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDBD6002036F37600960140 /* SMCellData.swift */; };
+		8DDBD6042036FB6900960140 /* SMTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDBD6032036FB6900960140 /* SMTableViewDelegate.swift */; };
+		8DDBD6052036FB6900960140 /* SMTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDBD6032036FB6900960140 /* SMTableViewDelegate.swift */; };
+		8DDBD6082036FD8700960140 /* MatchSettingsDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDBD6072036FD8700960140 /* MatchSettingsDataSourceTests.swift */; };
+		8DDBD60C2036FE7A00960140 /* DataSourceTableViewStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDBD60A2036FE7A00960140 /* DataSourceTableViewStub.swift */; };
 		8DE78EE52036494700B1CB9E /* SMEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE78EE42036494700B1CB9E /* SMEnums.swift */; };
 		8DE78EE62036494700B1CB9E /* SMEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE78EE42036494700B1CB9E /* SMEnums.swift */; };
 		8DE78EEC2036692F00B1CB9E /* SMColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE78EEB2036692F00B1CB9E /* SMColors.swift */; };
@@ -176,6 +182,10 @@
 		8DCB7FB9202C886A0052E20A /* MatchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchTests.swift; sourceTree = "<group>"; };
 		8DCB7FBC202C892A0052E20A /* SMMatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMMatch.swift; sourceTree = "<group>"; };
 		8DDBD5FC2036EF6600960140 /* SMSettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMSettingTableViewCell.swift; sourceTree = "<group>"; };
+		8DDBD6002036F37600960140 /* SMCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMCellData.swift; sourceTree = "<group>"; };
+		8DDBD6032036FB6900960140 /* SMTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMTableViewDelegate.swift; sourceTree = "<group>"; };
+		8DDBD6072036FD8700960140 /* MatchSettingsDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchSettingsDataSourceTests.swift; sourceTree = "<group>"; };
+		8DDBD60A2036FE7A00960140 /* DataSourceTableViewStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSourceTableViewStub.swift; sourceTree = "<group>"; };
 		8DE78EE42036494700B1CB9E /* SMEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMEnums.swift; sourceTree = "<group>"; };
 		8DE78EEB2036692F00B1CB9E /* SMColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMColors.swift; sourceTree = "<group>"; };
 		94BAC97F2ED8DF0C300BE488 /* Pods-SquashMarkerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SquashMarkerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SquashMarkerUITests/Pods-SquashMarkerUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -271,6 +281,8 @@
 		8D17E3EB202C685900993F06 /* SquashMarkerTests */ = {
 			isa = PBXGroup;
 			children = (
+				8DDBD6092036FE6100960140 /* Helpers */,
+				8DDBD6062036FD6200960140 /* MatchSettingsDataSourceTests */,
 				8DCB7FB8202C88570052E20A /* MatchTests */,
 				8DCB7FB5202C879A0052E20A /* GameplayTests */,
 				8D17E40F202C821C00993F06 /* PlayerTests */,
@@ -409,8 +421,10 @@
 		8D4181C22036E58C00D81AE3 /* TableView */ = {
 			isa = PBXGroup;
 			children = (
+				8DDBD5FF2036F33900960140 /* CellData */,
 				8DDBD5FB2036EF3700960140 /* TableView Cell */,
 				8D4181C32036E5D000D81AE3 /* SMTableViewDatasource.swift */,
+				8DDBD6032036FB6900960140 /* SMTableViewDelegate.swift */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -446,6 +460,30 @@
 				8DDBD5FC2036EF6600960140 /* SMSettingTableViewCell.swift */,
 			);
 			path = "TableView Cell";
+			sourceTree = "<group>";
+		};
+		8DDBD5FF2036F33900960140 /* CellData */ = {
+			isa = PBXGroup;
+			children = (
+				8DDBD6002036F37600960140 /* SMCellData.swift */,
+			);
+			path = CellData;
+			sourceTree = "<group>";
+		};
+		8DDBD6062036FD6200960140 /* MatchSettingsDataSourceTests */ = {
+			isa = PBXGroup;
+			children = (
+				8DDBD6072036FD8700960140 /* MatchSettingsDataSourceTests.swift */,
+			);
+			path = MatchSettingsDataSourceTests;
+			sourceTree = "<group>";
+		};
+		8DDBD6092036FE6100960140 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				8DDBD60A2036FE7A00960140 /* DataSourceTableViewStub.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		8DE78EE32036492C00B1CB9E /* Enums */ = {
@@ -830,9 +868,11 @@
 				8D17E40D202C6DD900993F06 /* SMGame.swift in Sources */,
 				8D17E3DD202C685900993F06 /* SquashMarker.xcdatamodeld in Sources */,
 				8DCB7FBD202C892A0052E20A /* SMMatch.swift in Sources */,
+				8DDBD6042036FB6900960140 /* SMTableViewDelegate.swift in Sources */,
 				8D4181C42036E5D000D81AE3 /* SMTableViewDatasource.swift in Sources */,
 				8DDBD5FD2036EF6600960140 /* SMSettingTableViewCell.swift in Sources */,
 				8DB1318B202DC8CE0036DB6E /* SMMatchProtocol.swift in Sources */,
+				8DDBD6012036F37600960140 /* SMCellData.swift in Sources */,
 				8D41816420367C2700D81AE3 /* Extensions.swift in Sources */,
 				8D4181BF2036817C00D81AE3 /* MatchSettingsViewController.swift in Sources */,
 				8D17E40A202C6DC700993F06 /* SMPlayer.swift in Sources */,
@@ -851,13 +891,17 @@
 				8D17E411202C83A300993F06 /* PlayerTests.swift in Sources */,
 				8D4181C52036E5D000D81AE3 /* SMTableViewDatasource.swift in Sources */,
 				8D17E3ED202C685900993F06 /* SquashMarkerTests.swift in Sources */,
+				8DDBD6022036F37600960140 /* SMCellData.swift in Sources */,
 				8D17E40E202C6DD900993F06 /* SMGame.swift in Sources */,
 				8DCB7FB7202C87B40052E20A /* GameplayTests.swift in Sources */,
 				8DE78EE62036494700B1CB9E /* SMEnums.swift in Sources */,
 				8DCB7FBE202C892A0052E20A /* SMMatch.swift in Sources */,
+				8DDBD6052036FB6900960140 /* SMTableViewDelegate.swift in Sources */,
 				8D41816520367C2700D81AE3 /* Extensions.swift in Sources */,
 				8DE78EED2036692F00B1CB9E /* SMColors.swift in Sources */,
+				8DDBD6082036FD8700960140 /* MatchSettingsDataSourceTests.swift in Sources */,
 				8D17E40B202C6DC700993F06 /* SMPlayer.swift in Sources */,
+				8DDBD60C2036FE7A00960140 /* DataSourceTableViewStub.swift in Sources */,
 				8D4181612036716700D81AE3 /* MatchSetupViewController.swift in Sources */,
 				8DB1318C202DC8CE0036DB6E /* SMMatchProtocol.swift in Sources */,
 				8D4181C02036817C00D81AE3 /* MatchSettingsViewController.swift in Sources */,

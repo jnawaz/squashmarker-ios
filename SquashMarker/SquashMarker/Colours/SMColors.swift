@@ -24,7 +24,7 @@ class SMColors: NSObject {
     
     class func blackOlive() -> UIColor {
         return UIColor(
-            red: 57.0, green: 61.0, blue: 63.0, alpha: 1.0
+            red: 57.0/255.0, green: 61.0/255.0, blue: 63.0/255.0, alpha: 1.0
         )
     }
     

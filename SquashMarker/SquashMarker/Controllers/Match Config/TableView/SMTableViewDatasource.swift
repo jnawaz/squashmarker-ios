@@ -8,13 +8,13 @@
 
 import UIKit
 
+fileprivate let reuseIdentifier = "matchSettingsCell"
+
 class SMTableViewDatasource: NSObject, UITableViewDataSource {
     
-    let reuseIdentifier = "matchSettingsCell"
+    let dataArray: [SMCellData]
     
-    let dataArray: Array<Any>
-    
-    init(data: Array<Any>) {
+    init(data: [SMCellData]) {
         dataArray = data
     }
     
@@ -26,6 +26,10 @@ class SMTableViewDatasource: NSObject, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier) as! SMSettingTableViewCell
         
         return cell
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
     }
     
     

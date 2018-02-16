@@ -11,6 +11,8 @@ import UIKit
 class MatchSettingsViewController: UIViewController {
     
     @IBOutlet weak var matchSetupTable: UITableView!
+    var dataSource: SMTableViewDatasource!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +21,30 @@ class MatchSettingsViewController: UIViewController {
         
         roundTableCorners()
         
+        var tableArray = [SMCellData]()
+        
+        let player1 = SMCellData(cellType: .playerDetails)
+        tableArray.append(player1)
+        
+        let player2 = SMCellData(cellType: .playerDetails)
+        tableArray.append(player2)
+        
+        let bestOfGames = SMCellData(cellType: .bestOfGames)
+        tableArray.append(bestOfGames)
+        
+        let scoringSystem = SMCellData(cellType: .scoringSystem)
+        tableArray.append(scoringSystem)
+        
+        let scoringTo = SMCellData(cellType: .scoringTo)
+        tableArray.append(scoringTo)
+        
+        dataSource = SMTableViewDatasource(data: tableArray)
+        matchSetupTable.dataSource = dataSource
+        
+        let tableDelegate = SMTableViewDelegate()
+        matchSetupTable.delegate = tableDelegate
+        
+        print("check ")
     }
 
     override func didReceiveMemoryWarning() {
