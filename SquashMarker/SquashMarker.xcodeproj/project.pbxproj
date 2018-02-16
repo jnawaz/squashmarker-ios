@@ -28,6 +28,8 @@
 		8DCB7FBE202C892A0052E20A /* SMMatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCB7FBC202C892A0052E20A /* SMMatch.swift */; };
 		8DE78EE52036494700B1CB9E /* SMEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE78EE42036494700B1CB9E /* SMEnums.swift */; };
 		8DE78EE62036494700B1CB9E /* SMEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE78EE42036494700B1CB9E /* SMEnums.swift */; };
+		8DE78EE82036678D00B1CB9E /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 8DE78EE72036678D00B1CB9E /* Fonts */; };
+		8DE78EE92036678D00B1CB9E /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 8DE78EE72036678D00B1CB9E /* Fonts */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,7 @@
 		8DCB7FB9202C886A0052E20A /* MatchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchTests.swift; sourceTree = "<group>"; };
 		8DCB7FBC202C892A0052E20A /* SMMatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMMatch.swift; sourceTree = "<group>"; };
 		8DE78EE42036494700B1CB9E /* SMEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMEnums.swift; sourceTree = "<group>"; };
+		8DE78EE72036678D00B1CB9E /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +123,7 @@
 		8D17E3D3202C685900993F06 /* SquashMarker */ = {
 			isa = PBXGroup;
 			children = (
+				8DE78EE72036678D00B1CB9E /* Fonts */,
 				8DE78EE32036492C00B1CB9E /* Enums */,
 				8DCB7FBB202C891A0052E20A /* Match */,
 				8D17E408202C6DA900993F06 /* Player */,
@@ -323,6 +327,7 @@
 				8D17E3E2202C685900993F06 /* LaunchScreen.storyboard in Resources */,
 				8D17E3DF202C685900993F06 /* Assets.xcassets in Resources */,
 				8D17E3DA202C685900993F06 /* Main.storyboard in Resources */,
+				8DE78EE82036678D00B1CB9E /* Fonts in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +335,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DE78EE92036678D00B1CB9E /* Fonts in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
