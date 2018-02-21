@@ -14,8 +14,8 @@ enum SMBestOf {
 }
 
 enum SMScoringMethod {
-    case English
-    case American
+    case english
+    case american
 }
 
 enum SMScoringTo {

@@ -9,21 +9,17 @@
 import UIKit
 
 class MatchSettingsViewController: UIViewController {
-    
     @IBOutlet weak var matchSetupTable: UITableView!
-    var dataSource: SMTableViewDatasource!
-    var delegate: SMTableViewDelegate!
-    
-    
+    weak var dataSource: SMTableViewDatasource!
+    weak var delegate: SMTableViewDelegate!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
         roundTableCorners()
-        
         setupDataSourceAndDelegate()
-        
+        lockTableScrolling()
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,11 +31,9 @@ class MatchSettingsViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
-    
     /// Setup the datasource and delegate for the method which is in a separate class
     func setupDataSourceAndDelegate() {
         var tableArray = [SMCellData]()
-        
         let player1 = SMCellData(cellType: .playerDetails)
         tableArray.append(player1)
         
@@ -60,12 +54,16 @@ class MatchSettingsViewController: UIViewController {
         
         delegate = SMTableViewDelegate()
         matchSetupTable.delegate = delegate
-        
     }
     
     // MARK: Table Visuals
     func roundTableCorners() {
         matchSetupTable.layer.cornerRadius = 8
+    }
+    
+    // MARK: Table Functionalities
+    func lockTableScrolling() {
+        matchSetupTable.isScrollEnabled = false
     }
     
 }

@@ -19,7 +19,7 @@ class GameplayTests: XCTestCase {
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
-        match = SMMatch(player1, player2, .bestOf5, .English)
+        match = SMMatch(player1, player2, .bestOf5, .english)
         currentGame = match?.gamesArray[0]
     }
     
@@ -43,7 +43,7 @@ class GameplayTests: XCTestCase {
     
     // American Scoring Tests
     func testAmericanHandout() {
-        match = SMMatch(player1, player2, .bestOf5, .American)
+        match = SMMatch(player1, player2, .bestOf5, .american)
         currentGame = match?.gamesArray[0]
         
         currentGame?.score = [0, 2]
@@ -58,7 +58,7 @@ class GameplayTests: XCTestCase {
     }
     
     func testGameWon() {
-        match = SMMatch(player1, player2, .bestOf5, .American)
+        match = SMMatch(player1, player2, .bestOf5, .american)
         currentGame = match?.gamesArray[0]
         
         currentGame?.score = [14, 2]
@@ -69,7 +69,7 @@ class GameplayTests: XCTestCase {
     }
     
     func testMovedOnToTheNextGame() {
-        match = SMMatch(player1, player2, .bestOf5, .American)
+        match = SMMatch(player1, player2, .bestOf5, .american)
         currentGame = match?.currentGame
         
         currentGame?.score = [14, 2]
@@ -84,7 +84,7 @@ class GameplayTests: XCTestCase {
 
     /// Applicable only in american scoring
     func testTieBreakNextPointWins() {
-        match = SMMatch(player1, player2, .bestOf5, .American)
+        match = SMMatch(player1, player2, .bestOf5, .american)
         currentGame = match?.currentGame
         
         currentGame?.score = [14, 14]
@@ -98,7 +98,7 @@ class GameplayTests: XCTestCase {
     
     /// Applicable only in american scoring
     func testTieBreakWinBy2Clear() {
-        match = SMMatch(player1, player2, .bestOf5, .American)
+        match = SMMatch(player1, player2, .bestOf5, .american)
         currentGame = match?.currentGame
         
         currentGame?.score = [14, 14]
@@ -112,12 +112,12 @@ class GameplayTests: XCTestCase {
         
         currentGame?.incrementScore(player1)
         XCTAssertEqual(match?.currentGame, match?.gamesArray[1])
-        XCTAssertEqual((match?.currentGame.score)!, [0,0])
+        XCTAssertEqual((match?.currentGame.score)!, [0, 0])
     }
     
     /// English scoring tie break one or three points
     func testTieBreakEnglishScoringNextPointWins() {
-        match = SMMatch(player1, player2, .bestOf5, .English)
+        match = SMMatch(player1, player2, .bestOf5, .english)
         currentGame = match?.currentGame
         
         currentGame?.score = [8, 8]
@@ -130,7 +130,7 @@ class GameplayTests: XCTestCase {
     }
     
     func testTieBreakEnglishScoringTo10() {
-        match = SMMatch(player1, player2, .bestOf5, .English)
+        match = SMMatch(player1, player2, .bestOf5, .english)
         currentGame = match?.currentGame
         
         currentGame?.score = [8, 8]

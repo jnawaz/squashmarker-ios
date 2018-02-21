@@ -1,0 +1,12 @@
+excluded:
+    - Pods
+
+ignores_empty_lines: true
+
+disabled_rules:
+    - vertical_whitespace
+    - trailing_whitespace
+    - line_length
+    - private_over_fileprivate
+    - multiple_closures_with_trailing_closure
+    

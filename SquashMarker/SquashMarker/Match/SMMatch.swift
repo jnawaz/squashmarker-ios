@@ -9,20 +9,16 @@
 import UIKit
 
 class SMMatch: NSObject, SMMatchProtocol {
-    
     var bestOf: SMBestOf!
     var gamesArray: [SMGame]!
     var currentGame: SMGame!
     var currentGameIndex: Int = 0
     var scoringMethod: SMScoringMethod?
     var scoringTo: SMScoringTo?
-    
     var home: SMPlayer!
     var homeGameCount = 0
-    
     var away: SMPlayer!
     var awayGameCount = 0
-    
     /// Match initialisation method taking two players
     /// by default the first parameter is the home team player
     /// - Parameters:
@@ -31,23 +27,18 @@ class SMMatch: NSObject, SMMatchProtocol {
     ///   - totalGames: Best of 5 (default) or Best of 3
     ///   - scoringStyle: English Method (default) or American
     ///   - ppg: Points per game
-    init(_ homePlayer: SMPlayer, _ awayPlayer: SMPlayer, _ totalGames: SMBestOf? = .bestOf5, _ scoringStyle: SMScoringMethod? = .English, ppg: SMScoringTo? = .fifteen) {
-        
+    init(_ homePlayer: SMPlayer, _ awayPlayer: SMPlayer, _ totalGames: SMBestOf? = .bestOf5, _ scoringStyle: SMScoringMethod? = .english, ppg: SMScoringTo? = .fifteen) {
         super.init()
-        
         home = homePlayer
         homePlayer.isHomePlayer = true
         away = awayPlayer
         awayPlayer.isHomePlayer = false
-        
         scoringMethod = scoringStyle
-        
-        if scoringMethod == .English {
+        if scoringMethod == .english {
             scoringTo = .nine
         } else {
             scoringTo = ppg
         }
-        
         bestOf = totalGames!
         switch bestOf {
         case .bestOf3:
@@ -125,14 +116,12 @@ class SMMatch: NSObject, SMMatchProtocol {
             } else if awayGameCount == 2 {
                 playerWon = away
             }
-            break
         default:
             if homeGameCount == 3 {
                 playerWon = home
             } else if awayGameCount == 3 {
                 playerWon = away
             }
-            break
         }
         
         return playerWon

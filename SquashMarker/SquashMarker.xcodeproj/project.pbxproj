@@ -84,6 +84,7 @@
 		8D4181C02036817C00D81AE3 /* MatchSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4181BE2036817C00D81AE3 /* MatchSettingsViewController.swift */; };
 		8D4181C42036E5D000D81AE3 /* SMTableViewDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4181C32036E5D000D81AE3 /* SMTableViewDatasource.swift */; };
 		8D4181C52036E5D000D81AE3 /* SMTableViewDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4181C32036E5D000D81AE3 /* SMTableViewDatasource.swift */; };
+		8DAA3D65203CA811001B8EBC /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 8DAA3D64203CA811001B8EBC /* .swiftlint.yml */; };
 		8DB1318B202DC8CE0036DB6E /* SMMatchProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB1318A202DC8CE0036DB6E /* SMMatchProtocol.swift */; };
 		8DB1318C202DC8CE0036DB6E /* SMMatchProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB1318A202DC8CE0036DB6E /* SMMatchProtocol.swift */; };
 		8DCB7FB7202C87B40052E20A /* GameplayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCB7FB6202C87B40052E20A /* GameplayTests.swift */; };
@@ -179,6 +180,7 @@
 		8D4181A820367F9A00D81AE3 /* OpenSans-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		8D4181BE2036817C00D81AE3 /* MatchSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchSettingsViewController.swift; sourceTree = "<group>"; };
 		8D4181C32036E5D000D81AE3 /* SMTableViewDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMTableViewDatasource.swift; sourceTree = "<group>"; };
+		8DAA3D64203CA811001B8EBC /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 		8DB1318A202DC8CE0036DB6E /* SMMatchProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMMatchProtocol.swift; sourceTree = "<group>"; };
 		8DCB7FB6202C87B40052E20A /* GameplayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameplayTests.swift; sourceTree = "<group>"; };
 		8DCB7FB9202C886A0052E20A /* MatchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchTests.swift; sourceTree = "<group>"; };
@@ -241,6 +243,7 @@
 		8D17E3C8202C685900993F06 = {
 			isa = PBXGroup;
 			children = (
+				8DAA3D64203CA811001B8EBC /* .swiftlint.yml */,
 				8D17E3D3202C685900993F06 /* SquashMarker */,
 				8D17E3EB202C685900993F06 /* SquashMarkerTests */,
 				8D17E3F6202C685900993F06 /* SquashMarkerUITests */,
@@ -537,6 +540,7 @@
 				8D17E3CF202C685900993F06 /* Resources */,
 				0D8447F6FD9471C7FC05BB22 /* [CP] Embed Pods Frameworks */,
 				07B35E778E95B35CB0F38F33 /* [CP] Copy Pods Resources */,
+				8DAA3D63203CA3E5001B8EBC /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -640,6 +644,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DAA3D65203CA811001B8EBC /* .swiftlint.yml in Resources */,
 				8D41819820367F6E00D81AE3 /* Montserrat-MediumItalic.ttf in Resources */,
 				8D4181A920367F9A00D81AE3 /* OpenSans-Italic.ttf in Resources */,
 				8D4181AD20367F9A00D81AE3 /* OpenSans-Bold.ttf in Resources */,
@@ -784,6 +789,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SquashMarkerUITests/Pods-SquashMarkerUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		8DAA3D63203CA3E5001B8EBC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint";
 		};
 		92DEBFFC0532DD0D8056BD2A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;

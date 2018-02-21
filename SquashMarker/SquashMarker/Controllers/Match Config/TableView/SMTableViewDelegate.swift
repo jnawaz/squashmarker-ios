@@ -27,6 +27,16 @@ class SMTableViewDelegate: NSObject, UITableViewDelegate {
             )
         )
         header.backgroundColor = SMColors.harvardCrimson()
+        
+        let matchSetupLabel = UILabel(frame: header.frame)
+        matchSetupLabel.text = "Matchplay Settings"
+        matchSetupLabel.textAlignment = .center
+        matchSetupLabel.font = UIFont(name: "Montserrat-SemiBold", size: 16.0)
+        matchSetupLabel.textColor = SMColors.antiFlashWhite()
+        
+        header.addSubview(matchSetupLabel)
+        
+        
         return header
     }
     

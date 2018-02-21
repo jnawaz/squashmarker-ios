@@ -10,5 +10,4 @@ import UIKit
 
 struct SMCellData {
     var cellType: SMSettingCellType?
-    
 }
