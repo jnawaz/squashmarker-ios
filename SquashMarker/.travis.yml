@@ -5,8 +5,9 @@ os: osx
 sudo: enabled
 
 osx_image: xcode9.2
+xcode_sdk: iphonesimulator11.2
 
 # safelist
 branches:
-only:
-- dev
+    only:
+        - dev
