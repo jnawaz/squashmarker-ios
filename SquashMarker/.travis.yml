@@ -3,3 +3,8 @@ xcode_project: SquashMarker.xcworkspace # path to your xcodeproj folder
 xcode_scheme: SquashMarker
 os: osx
 sudo: enabled
+
+# safelist
+branches:
+only:
+- dev
