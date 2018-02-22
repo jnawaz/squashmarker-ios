@@ -1,8 +1,14 @@
 language: swift
 xcode_workspace: SquashMarker.xcworkspace # path to your xcodeproj folder
-xcode_scheme: SquashMarkerTests
+xcode_scheme: SquashMarker
 os: osx
 sudo: enabled
+
+# install xcodetest dependencies
+before_install: ./install_dependencies.sh
+
+# build via xcodetest
+script: ./build_and_run_unit_tests.sh SquashMarker SquashMarkerTests
 
 osx_image: xcode9.2
 xcode_sdk: iphonesimulator11.2
