@@ -84,6 +84,7 @@
 		8D4181C02036817C00D81AE3 /* MatchSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4181BE2036817C00D81AE3 /* MatchSettingsViewController.swift */; };
 		8D4181C42036E5D000D81AE3 /* SMTableViewDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4181C32036E5D000D81AE3 /* SMTableViewDatasource.swift */; };
 		8D4181C52036E5D000D81AE3 /* SMTableViewDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4181C32036E5D000D81AE3 /* SMTableViewDatasource.swift */; };
+		8D5EB7A8203EBCFA00559C3A /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 8D5EB7A7203EBCFA00559C3A /* .travis.yml */; };
 		8DAA3D65203CA811001B8EBC /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 8DAA3D64203CA811001B8EBC /* .swiftlint.yml */; };
 		8DB1318B202DC8CE0036DB6E /* SMMatchProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB1318A202DC8CE0036DB6E /* SMMatchProtocol.swift */; };
 		8DB1318C202DC8CE0036DB6E /* SMMatchProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB1318A202DC8CE0036DB6E /* SMMatchProtocol.swift */; };
@@ -180,6 +181,7 @@
 		8D4181A820367F9A00D81AE3 /* OpenSans-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		8D4181BE2036817C00D81AE3 /* MatchSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchSettingsViewController.swift; sourceTree = "<group>"; };
 		8D4181C32036E5D000D81AE3 /* SMTableViewDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMTableViewDatasource.swift; sourceTree = "<group>"; };
+		8D5EB7A7203EBCFA00559C3A /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 		8DAA3D64203CA811001B8EBC /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 		8DB1318A202DC8CE0036DB6E /* SMMatchProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMMatchProtocol.swift; sourceTree = "<group>"; };
 		8DCB7FB6202C87B40052E20A /* GameplayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameplayTests.swift; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 		8D17E3C8202C685900993F06 = {
 			isa = PBXGroup;
 			children = (
+				8D5EB7A7203EBCFA00559C3A /* .travis.yml */,
 				8DAA3D64203CA811001B8EBC /* .swiftlint.yml */,
 				8D17E3D3202C685900993F06 /* SquashMarker */,
 				8D17E3EB202C685900993F06 /* SquashMarkerTests */,
@@ -671,6 +674,7 @@
 				8D4181AF20367F9A00D81AE3 /* OpenSans-ExtraBoldItalic.ttf in Resources */,
 				8D41817C20367F6E00D81AE3 /* Montserrat-SemiBoldItalic.ttf in Resources */,
 				8D41819C20367F6E00D81AE3 /* Montserrat-BlackItalic.ttf in Resources */,
+				8D5EB7A8203EBCFA00559C3A /* .travis.yml in Resources */,
 				8D41819220367F6E00D81AE3 /* Montserrat-Bold.ttf in Resources */,
 				8D41818E20367F6E00D81AE3 /* Montserrat-ExtraBoldItalic.ttf in Resources */,
 				8D41819A20367F6E00D81AE3 /* Montserrat-ExtraLightItalic.ttf in Resources */,
