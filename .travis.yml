@@ -8,6 +8,7 @@ osx_image: xcode9.2
 xcode_sdk: iphonesimulator11.2
 
 # safelist
+# whitelist
 branches:
-    only:
-        - master
+  only:
+    - dev
