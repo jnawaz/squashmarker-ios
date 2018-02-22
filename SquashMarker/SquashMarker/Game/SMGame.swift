@@ -67,53 +67,9 @@ class SMGame: NSObject {
     func checkGameFinish(_ player: SMPlayer) {
         switch scoringStyle {
         case .english:
-            if score![0] == 8 && score![1] == 8 {
-                tieBreak = true
-            } else if tieBreak {
-                switch winBy {
-                case .oneClear?:
-                    if score![0] == 9 || score![1] == 9 {
-                        matchDelegate?.progressToNextGame(player)
-                    }
-                case .twoClear?:
-                    if score![0] == 10 || score![1] == 10 {
-                        matchDelegate?.progressToNextGame(player)
-                    }
-                default:
-                    break
-                }
-            } else {
-                if score![0] == 9 || score![1] == 9 {
-                    matchDelegate?.progressToNextGame(player)
-                }
-            }
+            checkEnglishScoringGameFinished(player)
         default:
-            let scoring = matchDelegate?.getScoringTo()
-            // American Scoring
-            switch scoring {
-            case .eleven?:
-                if score![0] == 10 && score![1] == 10 {
-                    tieBreak = true
-                } else if tieBreak {
-                    workoutTieBreakScores(player)
-                } else {
-                    if score![0] == 11 || score![1] == 11 {
-                        matchDelegate?.progressToNextGame(player)
-                    }
-                }
-            case .fifteen?:
-                if score![0] == 14 && score![1] == 14 {
-                    tieBreak = true
-                } else if tieBreak {
-                    workoutTieBreakScores(player)
-                } else {
-                    if score![0] == 15 || score![1] == 15 {
-                        matchDelegate?.progressToNextGame(player)
-                    }
-                }
-            default:
-                break
-            }
+            checkAmericanScoringGameFinished(player)
         }
     }
     
@@ -147,5 +103,57 @@ class SMGame: NSObject {
     /// - Returns: true or false
     func oneClear() -> Bool {
         return score![0] - score![1] == 1 || score![1] - score![0] == 1
+    }
+    
+    func checkEnglishScoringGameFinished(_ player: SMPlayer) {
+        if score![0] == 8 && score![1] == 8 {
+            tieBreak = true
+        } else if tieBreak {
+            switch winBy {
+            case .oneClear?:
+                if score![0] == 9 || score![1] == 9 {
+                    matchDelegate?.progressToNextGame(player)
+                }
+            case .twoClear?:
+                if score![0] == 10 || score![1] == 10 {
+                    matchDelegate?.progressToNextGame(player)
+                }
+            default:
+                break
+            }
+        } else {
+            if score![0] == 9 || score![1] == 9 {
+                matchDelegate?.progressToNextGame(player)
+            }
+        }
+    }
+    
+    func checkAmericanScoringGameFinished(_ player: SMPlayer) {
+        let scoring = matchDelegate?.getScoringTo()
+        // American Scoring
+        switch scoring {
+        case .eleven?:
+            if score![0] == 10 && score![1] == 10 {
+                tieBreak = true
+            } else if tieBreak {
+                workoutTieBreakScores(player)
+            } else {
+                if score![0] == 11 || score![1] == 11 {
+                    matchDelegate?.progressToNextGame(player)
+                }
+            }
+        case .fifteen?:
+            if score![0] == 14 && score![1] == 14 {
+                tieBreak = true
+            } else if tieBreak {
+                workoutTieBreakScores(player)
+            } else {
+                if score![0] == 15 || score![1] == 15 {
+                    matchDelegate?.progressToNextGame(player)
+                }
+            }
+        default:
+            break
+        }
     }
 }
