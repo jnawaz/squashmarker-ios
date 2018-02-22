@@ -32,7 +32,7 @@ class MatchTests: XCTestCase {
     }
     
     func testMatchWon() {
-        let match = SMMatch(player1, player2, .bestOf5, .American)
+        let match = SMMatch(player1, player2, .bestOf5, .american)
         match.gamesArray[0].score = [15, 14]
         match.homeGameCount = 1
         
