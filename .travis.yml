@@ -1,6 +1,6 @@
 language: objective-c
 xcode_workspace: SquashMarker.xcworkspace # path to your xcodeproj folder
-xcode_scheme: SquashMarkerTests
+xcode_scheme: SquashMarker
 os: osx
 sudo: enabled
 
