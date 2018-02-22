@@ -105,6 +105,9 @@ class SMGame: NSObject {
         return score![0] - score![1] == 1 || score![1] - score![0] == 1
     }
     
+    /// Works out if an english socring game is over
+    ///
+    /// - Parameter player: Player that scored the point
     func checkEnglishScoringGameFinished(_ player: SMPlayer) {
         if score![0] == 8 && score![1] == 8 {
             tieBreak = true
@@ -128,6 +131,10 @@ class SMGame: NSObject {
         }
     }
     
+    
+    /// Works out if an amercian socring game is over
+    ///
+    /// - Parameter player: Player that scored the point
     func checkAmericanScoringGameFinished(_ player: SMPlayer) {
         let scoring = matchDelegate?.getScoringTo()
         // American Scoring
