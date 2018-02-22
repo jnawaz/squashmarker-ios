@@ -7,6 +7,9 @@ sudo: enabled
 osx_image: xcode9.2
 xcode_sdk: iphonesimulator11.2
 
+script:
+    - xcodebuild clean test -workspace SquashMarker.xcworkspace -scheme SquashMarker -destination "platform=iOS Simulator,name=iPhone 7,OS=11.1" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO -quiet
+
 # safelist
 # whitelist
 branches:
