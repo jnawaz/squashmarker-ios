@@ -10,4 +10,4 @@ xcode_sdk: iphonesimulator11.2
 # safelist
 branches:
     only:
-        - dev
+        - master
