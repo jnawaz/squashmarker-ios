@@ -1,8 +1,10 @@
 language: swift
-xcode_project: SquashMarker.xcworkspace # path to your xcodeproj folder
+xcode_workspace: SquashMarker.xcworkspace # path to your xcodeproj folder
 xcode_scheme: SquashMarker
 os: osx
 sudo: enabled
+
+osx_image: xcode9.2
 
 # safelist
 branches:
