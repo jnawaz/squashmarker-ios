@@ -8,8 +8,12 @@ osx_image: xcode9.2
 xcode_sdk: iphonesimulator11.2
 
 script:
-    - xcodebuild clean test -workspace SquashMarker/SquashMarker.xcworkspace -scheme SquashMarkerTests -destination "platform=iOS Simulator,name=iPhone 7,OS=11.2" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO -quiet
-
+    - xcodebuild \
+  -workspace SquashMarkert/SquashMarker.xcworkspace \
+  -scheme SquashMarker \
+  -sdk iphonesimulator \
+  -destination 'platform=iOS Simulator,name=iPhone 6,OS=8.11' \
+  test | xcpretty
 # safelist
 # whitelist
 branches:
