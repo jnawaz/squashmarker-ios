@@ -7,6 +7,11 @@ sudo: enabled
 osx_image: xcode9.2
 xcode_sdk: iphonesimulator11.2
 
+before_install:
+    - brew update
+    - brew install xctool
+script: xctool -workspace SquashMarker.xcworkspace -scheme SquashMarker test
+
 # safelist
 # whitelist
 branches:
