@@ -15,10 +15,8 @@ class SMGame: NSObject {
     var server: SMPlayer?
     var score: [Int]?
     var scoringStyle: SMScoringMethod!
-    
     var winBy: SMTieBreakTo?
     var tieBreak: Bool = false
-    
     weak var matchDelegate: SMMatchProtocol?
     
     init(_ scoringMethod: SMScoringMethod, matchProtocol: SMMatchProtocol) {
@@ -46,7 +44,6 @@ class SMGame: NSObject {
         }
     }
     
-    
     /// This method increments the players score
     ///
     /// - Parameter player: The player whose scores should be incremented
@@ -59,7 +56,6 @@ class SMGame: NSObject {
         
         checkGameFinish(player)
     }
-    
     
     /// Method checks if a game is finished by checking the score based on scoring type English or American, takes into account tie breaks
     /// and then progresses the match to the next game.
@@ -130,7 +126,6 @@ class SMGame: NSObject {
             }
         }
     }
-    
     
     /// Works out if an amercian socring game is over
     ///
