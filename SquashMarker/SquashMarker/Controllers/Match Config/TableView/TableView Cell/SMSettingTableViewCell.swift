@@ -16,18 +16,36 @@ enum SMSettingCellType {
 }
 
 class SMSettingTableViewCell: UITableViewCell {
-
+    
     var cellSettingType: SMSettingCellType?
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
-
+    
+    func configure() {
+        switch cellSettingType {
+        case .playerDetails?:
+            break
+            
+        case .bestOfGames?:
+            break
+            
+        case .scoringSystem?:
+            break
+            
+        case .scoringTo?:
+            break
+            
+        default:
+            break
+        }
+    }
 }

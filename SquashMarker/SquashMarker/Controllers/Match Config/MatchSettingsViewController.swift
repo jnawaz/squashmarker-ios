@@ -72,6 +72,7 @@ extension MatchSettingsViewController: UITableViewDataSource {
             cell = SMSettingTableViewCell(style: .default, reuseIdentifier: reuseIdentifier)
         }
         cell?.selectionStyle = .none
+        cell?.configure()
         return cell!
     }
     
