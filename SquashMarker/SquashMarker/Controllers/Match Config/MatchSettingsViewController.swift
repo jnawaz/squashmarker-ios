@@ -72,7 +72,6 @@ extension MatchSettingsViewController: UITableViewDataSource {
             cell = SMSettingTableViewCell(style: .default, reuseIdentifier: reuseIdentifier)
         }
         cell?.selectionStyle = .none
-        cell?.textLabel?.text = "\(indexPath.row)"
         return cell!
     }
     
