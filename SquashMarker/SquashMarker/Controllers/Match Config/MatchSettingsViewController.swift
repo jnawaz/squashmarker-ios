@@ -8,10 +8,12 @@
 
 import UIKit
 
+fileprivate let reuseIdentifier = "matchSettingsCell"
+fileprivate let headerHeight = 100.0
+
 class MatchSettingsViewController: UIViewController {
     @IBOutlet weak var matchSetupTable: UITableView!
-    weak var dataSource: SMTableViewDatasource!
-    weak var delegate: SMTableViewDelegate!
+    var tableArray = [SMCellData]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,27 +35,18 @@ class MatchSettingsViewController: UIViewController {
     
     /// Setup the datasource and delegate for the method which is in a separate class
     func setupDataSourceAndDelegate() {
-        var tableArray = [SMCellData]()
-        let player1 = SMCellData(cellType: .playerDetails)
-        tableArray.append(player1)
         
-        let player2 = SMCellData(cellType: .playerDetails)
-        tableArray.append(player2)
+        tableArray = [
+            SMCellData(cellType: .playerDetails),
+            SMCellData(cellType: .playerDetails),
+            SMCellData(cellType: .bestOfGames),
+            SMCellData(cellType: .scoringSystem),
+            SMCellData(cellType: .scoringTo)
+        ]
+
+        matchSetupTable.dataSource = self
+        matchSetupTable.delegate = self
         
-        let bestOfGames = SMCellData(cellType: .bestOfGames)
-        tableArray.append(bestOfGames)
-        
-        let scoringSystem = SMCellData(cellType: .scoringSystem)
-        tableArray.append(scoringSystem)
-        
-        let scoringTo = SMCellData(cellType: .scoringTo)
-        tableArray.append(scoringTo)
-        
-        dataSource = SMTableViewDatasource(data: tableArray)
-        matchSetupTable.dataSource = dataSource
-        
-        delegate = SMTableViewDelegate()
-        matchSetupTable.delegate = delegate
     }
     
     // MARK: Table Visuals
@@ -65,5 +58,60 @@ class MatchSettingsViewController: UIViewController {
     func lockTableScrolling() {
         matchSetupTable.isScrollEnabled = false
     }
+}
+
+extension MatchSettingsViewController: UITableViewDataSource {
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return tableArray.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        var cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier) as? SMSettingTableViewCell
+        if cell == nil {
+            cell = SMSettingTableViewCell(style: .default, reuseIdentifier: reuseIdentifier)
+        }
+        cell?.selectionStyle = .none
+        cell?.textLabel?.text = "\(indexPath.row)"
+        return cell!
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+}
+
+extension MatchSettingsViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("selected cell")
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let header = SettingsHeader(
+            frame: CGRect(
+                x: 0.0,
+                y: 0.0,
+                width: Double(tableView.frame.size.width),
+                height: headerHeight
+                
+            )
+        )
+        header.backgroundColor = SMColors.harvardCrimson()
+        
+        let matchSetupLabel = UILabel(frame: header.frame)
+        matchSetupLabel.text = "Matchplay Settings"
+        matchSetupLabel.textAlignment = .center
+        matchSetupLabel.font = UIFont(name: "Montserrat-SemiBold", size: 16.0)
+        matchSetupLabel.textColor = SMColors.antiFlashWhite()
+        
+        header.addSubview(matchSetupLabel)
+        
+        
+        return header
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return CGFloat(headerHeight)
+    }
 }

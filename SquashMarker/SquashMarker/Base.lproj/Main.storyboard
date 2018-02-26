@@ -122,7 +122,7 @@
                     </view>
                     <value key="contentSizeForViewInPopover" type="size" width="100" height="100"/>
                     <connections>
-                        <outlet property="matchSetupTable" destination="LNU-2u-ye1" id="SHy-nR-yJv"/>
+                        <outlet property="matchSetupTable" destination="LNU-2u-ye1" id="xnC-OH-ypm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X4x-Zz-dFW" userLabel="First Responder" sceneMemberID="firstResponder"/>
