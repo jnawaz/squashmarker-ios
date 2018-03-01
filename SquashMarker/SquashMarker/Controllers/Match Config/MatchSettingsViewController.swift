@@ -60,6 +60,7 @@ class MatchSettingsViewController: UIViewController {
     }
 }
 
+// MARK: TableView Datasource
 extension MatchSettingsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -82,6 +83,7 @@ extension MatchSettingsViewController: UITableViewDataSource {
     
 }
 
+// MARK: TableView Delegate
 extension MatchSettingsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("selected cell")
@@ -94,7 +96,6 @@ extension MatchSettingsViewController: UITableViewDelegate {
                 y: 0.0,
                 width: Double(tableView.frame.size.width),
                 height: headerHeight
-                
             )
         )
         header.backgroundColor = SMColors.harvardCrimson()
