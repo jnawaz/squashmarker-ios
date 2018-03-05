@@ -18,6 +18,11 @@ enum SMSettingCellType {
 class SMSettingTableViewCell: UITableViewCell {
     
     var cellSettingType: SMSettingCellType?
+    var isHomePlayer: Bool = false
+    
+    // MARK: - IBOutlets
+    @IBOutlet weak var homeAwayLabel: UILabel!
+    @IBOutlet weak var nameTextfield: UITextField!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -31,14 +36,19 @@ class SMSettingTableViewCell: UITableViewCell {
     }
     
     func configure() {
+        
+        defaultConfig()
+        
         switch cellSettingType {
         case .playerDetails?:
-            break
+            homeAwayLabel.text = (isHomePlayer) ? "Home Player" : "Away Player"
             
         case .bestOfGames?:
+            hideNameInput()
             break
             
         case .scoringSystem?:
+            hideNameInput()
             break
             
         case .scoringTo?:
@@ -47,5 +57,14 @@ class SMSettingTableViewCell: UITableViewCell {
         default:
             break
         }
+    }
+    
+    func hideNameInput() {
+        nameTextfield.isHidden = false
+    }
+    
+    func defaultConfig() {
+        homeAwayLabel.isHidden = false
+        nameTextfield.isHidden = false
     }
 }

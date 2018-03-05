@@ -73,6 +73,8 @@ extension MatchSettingsViewController: UITableViewDataSource {
             cell = SMSettingTableViewCell(style: .default, reuseIdentifier: reuseIdentifier)
         }
         cell?.selectionStyle = .none
+        cell?.isHomePlayer = (indexPath.row == 0) ? true : false
+        cell?.cellSettingType = tableArray[indexPath.row].cellType
         cell?.configure()
         return cell!
     }
@@ -80,7 +82,6 @@ extension MatchSettingsViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-    
 }
 
 // MARK: TableView Delegate
@@ -114,5 +115,12 @@ extension MatchSettingsViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return CGFloat(headerHeight)
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        switch indexPath.row {
+        default:
+            return CGFloat(100.0)
+        }
     }
 }
