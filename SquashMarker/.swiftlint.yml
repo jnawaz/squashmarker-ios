@@ -9,4 +9,4 @@ disabled_rules:
     - line_length
     - private_over_fileprivate
     - multiple_closures_with_trailing_closure
-    
+    - force_cast

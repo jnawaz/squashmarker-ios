@@ -76,6 +76,7 @@ extension MatchSettingsViewController: UITableViewDataSource {
         cell?.isHomePlayer = (indexPath.row == 0) ? true : false
         cell?.cellSettingType = tableArray[indexPath.row].cellType
         cell?.configure()
+        cell?.refreshDelegate = self
         return cell!
     }
     
@@ -109,7 +110,6 @@ extension MatchSettingsViewController: UITableViewDelegate {
         
         header.addSubview(matchSetupLabel)
         
-        
         return header
     }
     
@@ -121,6 +121,35 @@ extension MatchSettingsViewController: UITableViewDelegate {
         switch indexPath.row {
         default:
             return CGFloat(100.0)
+        }
+    }
+}
+
+extension MatchSettingsViewController: SMTableViewReloader {
+    
+    func refreshTable() {
+        matchSetupTable.reloadData()
+    }
+    
+    func updateScoringToCell(switcher: UISwitch) {
+        
+        let scoringToCell = self.matchSetupTable.cellForRow(at: IndexPath(row: 4, section: 0)) as! SMSettingTableViewCell
+        switch switcher.tag {
+        case 0:
+            // Scoring Style Cell
+            if switcher.isOn {
+                scoringToCell.leftConfigLabel.text = ""
+                scoringToCell.rightConfigLabel.text = "9"
+            } else {
+                scoringToCell.leftConfigLabel.text = "11"
+                scoringToCell.rightConfigLabel.text = "15"
+            }
+            
+        case 1:
+            break
+            
+        default:
+            break
         }
     }
 }

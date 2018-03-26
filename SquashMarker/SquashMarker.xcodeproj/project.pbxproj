@@ -258,6 +258,7 @@
 		8D17E3D3202C685900993F06 /* SquashMarker */ = {
 			isa = PBXGroup;
 			children = (
+				8D3995FB20567F9A0086F8B7 /* Utilities */,
 				8D41816620367F0F00D81AE3 /* Fonts */,
 				8D41816220367C1300D81AE3 /* Extensions */,
 				8D41815C2036712C00D81AE3 /* Controllers */,
@@ -320,6 +321,13 @@
 				8D17E410202C83A300993F06 /* PlayerTests.swift */,
 			);
 			path = PlayerTests;
+			sourceTree = "<group>";
+		};
+		8D3995FB20567F9A0086F8B7 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		8D41815C2036712C00D81AE3 /* Controllers */ = {

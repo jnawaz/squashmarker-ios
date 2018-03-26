@@ -118,11 +118,49 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="npt-vi-4MJ">
+                                                    <rect key="frame" x="20" y="39" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GZP-o3-uFp">
+                                                    <rect key="frame" x="273" y="39" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ivn-rX-Cif">
+                                                    <rect key="frame" x="143" y="34" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="switchChangedWithSender:" destination="nWY-ZL-aFD" eventType="valueChanged" id="P4m-2u-aLJ"/>
+                                                    </connections>
+                                                </switch>
+                                                <switch opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RJE-mB-Veg">
+                                                    <rect key="frame" x="143" y="34" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="switchChangedWithSender:" destination="nWY-ZL-aFD" eventType="valueChanged" id="oi5-f1-oRO"/>
+                                                    </connections>
+                                                </switch>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="npt-vi-4MJ" firstAttribute="centerY" secondItem="1gW-aj-GGm" secondAttribute="centerY" id="58g-T6-EvE"/>
+                                                <constraint firstItem="Ivn-rX-Cif" firstAttribute="centerY" secondItem="1gW-aj-GGm" secondAttribute="centerY" id="5fA-66-1mm"/>
+                                                <constraint firstItem="npt-vi-4MJ" firstAttribute="leading" secondItem="1gW-aj-GGm" secondAttribute="leading" constant="20" id="IoL-l3-EDQ"/>
+                                                <constraint firstAttribute="trailing" secondItem="GZP-o3-uFp" secondAttribute="trailing" constant="20" id="S1e-7r-gkA"/>
+                                                <constraint firstItem="GZP-o3-uFp" firstAttribute="centerY" secondItem="1gW-aj-GGm" secondAttribute="centerY" id="XVD-Pc-zH6"/>
+                                                <constraint firstItem="RJE-mB-Veg" firstAttribute="centerX" secondItem="1gW-aj-GGm" secondAttribute="centerX" id="nbb-PT-woc"/>
+                                                <constraint firstItem="RJE-mB-Veg" firstAttribute="centerY" secondItem="1gW-aj-GGm" secondAttribute="centerY" id="qD1-89-q1i"/>
+                                                <constraint firstItem="Ivn-rX-Cif" firstAttribute="centerX" secondItem="1gW-aj-GGm" secondAttribute="centerX" id="qdZ-w1-jCB"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="homeAwayLabel" destination="hCh-q3-0Mo" id="JJW-OM-Cqr"/>
-                                            <outlet property="nameTextfield" destination="c2Q-U6-cN1" id="gbu-DA-sn6"/>
+                                            <outlet property="leftConfigLabel" destination="npt-vi-4MJ" id="NZa-Z8-gF8"/>
+                                            <outlet property="nameTextfield" destination="c2Q-U6-cN1" id="Tec-2o-NHS"/>
+                                            <outlet property="rightConfigLabel" destination="GZP-o3-uFp" id="6fi-oe-5Es"/>
+                                            <outlet property="scoringStyleSwitcher" destination="Ivn-rX-Cif" id="8jv-qo-BgP"/>
+                                            <outlet property="scoringToSwitcher" destination="RJE-mB-Veg" id="geu-2G-jio"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

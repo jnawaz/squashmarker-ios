@@ -20,6 +20,7 @@ class MatchSetupViewController: UIViewController {
         navigationController?.isNavigationBarHidden = true
         
         startGameButton.shake()
+    
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,8 +29,6 @@ class MatchSetupViewController: UIViewController {
     }
     
     @IBAction func pressedMatchSetup(_ sender: Any) {
-     
-        
         
     }
 
