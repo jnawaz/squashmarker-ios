@@ -140,9 +140,12 @@ extension MatchSettingsViewController: SMTableViewReloader {
             if switcher.isOn {
                 scoringToCell.leftConfigLabel.text = ""
                 scoringToCell.rightConfigLabel.text = "9"
+                scoringToCell.scoringToSwitcher.isOn = true
+                scoringToCell.scoringToSwitcher.isEnabled = false
             } else {
                 scoringToCell.leftConfigLabel.text = "11"
                 scoringToCell.rightConfigLabel.text = "15"
+                scoringToCell.scoringToSwitcher.isEnabled = true
             }
             
         case 1:
