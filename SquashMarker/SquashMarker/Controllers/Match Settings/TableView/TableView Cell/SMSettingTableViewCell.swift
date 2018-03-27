@@ -76,6 +76,7 @@ class SMSettingTableViewCell: UITableViewCell {
                 // American Scoring
                 leftConfigLabel.text = ""
                 rightConfigLabel.text = "9"
+                scoringToSwitcher.isEnabled = false
             } else {
                 // English Scoring
                 leftConfigLabel.text = "11"

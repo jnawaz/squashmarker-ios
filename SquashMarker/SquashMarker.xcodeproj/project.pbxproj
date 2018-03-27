@@ -100,6 +100,8 @@
 		8DE78EE62036494700B1CB9E /* SMEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE78EE42036494700B1CB9E /* SMEnums.swift */; };
 		8DE78EEC2036692F00B1CB9E /* SMColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE78EEB2036692F00B1CB9E /* SMColors.swift */; };
 		8DE78EED2036692F00B1CB9E /* SMColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE78EEB2036692F00B1CB9E /* SMColors.swift */; };
+		8DFD4543206A799100104C8C /* SMScoringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFD4542206A799100104C8C /* SMScoringViewController.swift */; };
+		8DFD4544206A799100104C8C /* SMScoringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFD4542206A799100104C8C /* SMScoringViewController.swift */; };
 		CEBB6652736FD2A077E5ED03 /* Pods_SquashMarkerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8446D4EEF2709508C3492EB /* Pods_SquashMarkerTests.framework */; };
 		F13FBD39228C2A1F30441211 /* Pods_SquashMarker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D7BA9573BD4029AFC593E4A /* Pods_SquashMarker.framework */; };
 /* End PBXBuildFile section */
@@ -185,6 +187,7 @@
 		8DDBD60E20370B3200960140 /* SettingsHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsHeader.swift; sourceTree = "<group>"; };
 		8DE78EE42036494700B1CB9E /* SMEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMEnums.swift; sourceTree = "<group>"; };
 		8DE78EEB2036692F00B1CB9E /* SMColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMColors.swift; sourceTree = "<group>"; };
+		8DFD4542206A799100104C8C /* SMScoringViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMScoringViewController.swift; sourceTree = "<group>"; };
 		94BAC97F2ED8DF0C300BE488 /* Pods-SquashMarkerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SquashMarkerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SquashMarkerUITests/Pods-SquashMarkerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A8446D4EEF2709508C3492EB /* Pods_SquashMarkerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SquashMarkerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E70482BFE643D75B8FAA2286 /* Pods_SquashMarkerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SquashMarkerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -333,7 +336,8 @@
 		8D41815C2036712C00D81AE3 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				8D4181BD2036815B00D81AE3 /* Match Config */,
+				8DFD4541206A795800104C8C /* In Game Scoring */,
+				8D4181BD2036815B00D81AE3 /* Match Settings */,
 				8D41815E2036714100D81AE3 /* In Match */,
 				8D41815D2036713500D81AE3 /* Match Setup */,
 			);
@@ -414,13 +418,13 @@
 			path = OpenSans;
 			sourceTree = "<group>";
 		};
-		8D4181BD2036815B00D81AE3 /* Match Config */ = {
+		8D4181BD2036815B00D81AE3 /* Match Settings */ = {
 			isa = PBXGroup;
 			children = (
 				8D4181C22036E58C00D81AE3 /* TableView */,
 				8D4181BE2036817C00D81AE3 /* MatchSettingsViewController.swift */,
 			);
-			path = "Match Config";
+			path = "Match Settings";
 			sourceTree = "<group>";
 		};
 		8D4181C22036E58C00D81AE3 /* TableView */ = {
@@ -504,6 +508,14 @@
 				8DE78EEB2036692F00B1CB9E /* SMColors.swift */,
 			);
 			path = Colours;
+			sourceTree = "<group>";
+		};
+		8DFD4541206A795800104C8C /* In Game Scoring */ = {
+			isa = PBXGroup;
+			children = (
+				8DFD4542206A799100104C8C /* SMScoringViewController.swift */,
+			);
+			path = "In Game Scoring";
 			sourceTree = "<group>";
 		};
 		BC6C81FD5501DA7A3C38DBE6 /* Frameworks */ = {
@@ -887,6 +899,7 @@
 				8D17E40D202C6DD900993F06 /* SMGame.swift in Sources */,
 				8D17E3DD202C685900993F06 /* SquashMarker.xcdatamodeld in Sources */,
 				8DCB7FBD202C892A0052E20A /* SMMatch.swift in Sources */,
+				8DFD4543206A799100104C8C /* SMScoringViewController.swift in Sources */,
 				8DDBD5FD2036EF6600960140 /* SMSettingTableViewCell.swift in Sources */,
 				8DB1318B202DC8CE0036DB6E /* SMMatchProtocol.swift in Sources */,
 				8DDBD6012036F37600960140 /* SMCellData.swift in Sources */,
@@ -908,6 +921,7 @@
 				8DDBD5FE2036EF6600960140 /* SMSettingTableViewCell.swift in Sources */,
 				8D17E411202C83A300993F06 /* PlayerTests.swift in Sources */,
 				8D17E3ED202C685900993F06 /* SquashMarkerTests.swift in Sources */,
+				8DFD4544206A799100104C8C /* SMScoringViewController.swift in Sources */,
 				8DDBD61020370B3200960140 /* SettingsHeader.swift in Sources */,
 				8DDBD6022036F37600960140 /* SMCellData.swift in Sources */,
 				8D17E40E202C6DD900993F06 /* SMGame.swift in Sources */,
